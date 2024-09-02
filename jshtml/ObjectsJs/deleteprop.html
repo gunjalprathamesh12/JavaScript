@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delete Prop</title>
+  </head>
+  <body>
+    <h1>Delete obj prop</h1>
+    <script>
+      var student = {
+        name: "Pranav",
+        age: 16,
+        number: 9356789789,
+      };
+      document.write("Before deleting number=" + student.number + "<br>");
+      delete student.number;
+      document.write("After deleting number=" + student.number);
+    </script>
+  </body>
+</html>
