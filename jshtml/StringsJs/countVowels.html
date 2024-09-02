@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counting</title>
+  </head>
+  <body>
+    counting the no of vowels and conconents in an string arry
+    <script>
+      var vowlsum = 0,
+        conconentsum = 0;
+      var strarr = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+      ];
+      for (var i = 0; i <= strarr.length; i++) {
+        if (
+          strarr[i] == "a" ||
+          strarr[i] == "e" ||
+          strarr[i] == "i" ||
+          strarr[i] == "o" ||
+          strarr[i] == "u"
+        ) {
+          vowlsum++;
+        } else {
+          conconentsum++;
+        }
+      }
+
+      document.write(
+        "number of vowels in the entered string is=" + vowlsum + "<br>"
+      );
+
+      document.write(
+        "number of conconents in the entered string is=" + conconentsum + "<br>"
+      );
+    </script>
+  </body>
+</html>
