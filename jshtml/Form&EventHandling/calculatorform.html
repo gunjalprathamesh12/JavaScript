@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matgematical Calculator</title>
+  </head>
+  <body>
+    <form>
+      Enter first number: <input placeholder="Enter first number" id="first" />
+      <br /><br />
+      Enter Second number:<input
+        placeholder="Enter second number"
+        id="second"
+      /><br />
+      <br /><br />
+      result:<input placeholder="result" id="answer" /><br />
+      <br /><br />
+      <button type="button" onclick="add()">Addition</button>
+      <button type="button" onclick="sub()">substraction</button>
+      <button type="button" onabort="mul()">Multiplication</button>
+      <button type="button" onclick="div()">division</button>
+    </form>
+    <script>
+      function add() {
+        var num1, num2, sum;
+        num1 = parseInt(document.getElementById("first").value);
+        num2 = parseInt(document.getElementById("second").value);
+        sum = num1 + num2;
+        document.getElementById(answer).innerHTML = sum;
+      }
+
+      function sub() {
+        var num1, num2, sub;
+        num1 = parseInt(document.getElementById("first").value);
+        num2 = parseInt(document.getElementById("second").value);
+        sub = num1 + num2;
+        document.write((getElementById(answer).innerHTML = sub));
+      }
+    </script>
+  </body>
+</html>
