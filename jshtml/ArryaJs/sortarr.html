@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting</title>
+  </head>
+  <body>
     <h1>Sortin array elememts</h1>
 
     <script>
-        var arr=[2,1,4,3,6,5];
-        arr.sort();
-        for(var i=0;i<arr.length;i++)
-    {
-        document.write(arr[i]+"<br>");
-    }
+      var arr = [2, 1, 4, 3, 6, 5];
+      arr.sort();
+      for (var i = 0; i < arr.length; i++) {
+        document.write(arr[i] + "<br>");
+      }
+
+      //decending order sort
+      var a = [1, 6, 3, 7, 2, 5, 4, 9, 8];
+      a.sort((a, b) => b - a);
+      for (var i = 0; i < arr.length; i++) {
+        document.write(arr[i] + "<br>");
+      }
     </script>
-</body>
+  </body>
 </html>
