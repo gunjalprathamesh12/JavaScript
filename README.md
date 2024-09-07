@@ -5,5 +5,5 @@ Here i am going to write the javascript programs.
 <br>
 all the javascript from zero to hero
 <br>
-stay tuned with me
+stay tuned with me.
 
