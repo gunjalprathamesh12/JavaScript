@@ -2,9 +2,9 @@ p{
     text-align: center;
     background-color: red;
 }
-
 h1{
     text-align: center;
+    display: flex;
     border: 0cap;
     align-items: center;
 }
