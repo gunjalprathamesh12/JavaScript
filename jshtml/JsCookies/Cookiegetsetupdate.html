@@ -16,7 +16,12 @@
         id="t2"
         placeholder="enter a value"
       /><br /><br /><br />
-      <input type="button" name="getCookie" value="CreateCookie" /><br />
+      <input
+        type="button"
+        name="getCookie"
+        value="CreateCookie"
+        onclick="CreateCookie()"
+      /><br />
       <input type="button" name="getCookie" value="ReadCookie" /><br />
       <input type="button" name="getCookie" value="updateCookie" /><br />
       <input type="button" name="getCookie" value="deleteCookie" /><br />
@@ -28,7 +33,7 @@
           document.getElementById("t1").value +
           " = " +
           document.getElementById("t2").value;
-        ("expires mon,20 dec 2024 12:00:00 UTC");
+        ("expires=Mon, 20 Dec 2024 12:00:00 UTC");
         alert("Cookie Created");
       }
     </script>
