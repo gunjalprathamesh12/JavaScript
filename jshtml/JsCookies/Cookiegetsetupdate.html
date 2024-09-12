@@ -25,6 +25,9 @@
       <input type="button" name="getCookie" value="ReadCookie" /><br />
       <input type="button" name="getCookie" value="updateCookie" /><br />
       <input type="button" name="getCookie" value="deleteCookie" /><br />
+      your cookie:
+      <p id="p1"></p>
+      <br />
     </form>
 
     <script>
@@ -35,6 +38,11 @@
           document.getElementById("t2").value;
         ("expires=Mon, 20 Dec 2024 12:00:00 UTC");
         alert("Cookie Created");
+      }
+
+      function ReadCookie() {
+        var x = document.cookie;
+        document.getElementById("p1").innerHTML;
       }
     </script>
   </body>
