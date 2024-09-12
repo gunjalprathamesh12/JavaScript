@@ -28,7 +28,12 @@
         value="ReadCookie"
         onclick="ReadCookie()"
       /><br />
-      <input type="button" name="getCookie" value="updateCookie" /><br />
+      <input
+        type="button"
+        name="getCookie"
+        value="updateCookie"
+        onclick="updateCookie()"
+      /><br />
       <input type="button" name="getCookie" value="deleteCookie" /><br />
       your cookie:
       <p id="p1"></p>
@@ -48,6 +53,14 @@
       function ReadCookie() {
         var x = document.cookie;
         document.getElementById("p1").innerHTML;
+      }
+
+      function updateCookie() {
+        var q = prompt("Enter The Key to update::");
+        var r = prompt("Enter the value::");
+        document.cookie = q + "=" + r + ";";
+        alert("Cookie update sucessfully");
+        alert(document.cookie);
       }
     </script>
   </body>
