@@ -6,17 +6,9 @@
     <title>Create and Update Cookie</title>
   </head>
   <body>
-    Enter the Key:<input
-      type="text"
-      value="text"
-      placeholder="Enter key Value"
-    />
+    Enter the Key:<input type="text" id="key1" placeholder="Enter key Value" />
     <br /><br />
-    Enter the Value:<input
-      type="text"
-      value="text"
-      placeholder="Enter  Value"
-    />
+    Enter the Value:<input type="text" id="value1" placeholder="Enter  Value" />
     <br /><br />
     <input
       type="button"
@@ -32,6 +24,15 @@
       onclick="updateCookie()"
     />
     <br /><br />
-    <script></script>
+    <script>
+      function CreateCookie() {
+        document.cookie =
+          document.getElementById("t1").value +
+          " = " +
+          document.getElementById("t2").value;
+        ("expires=Mon, 20 Dec 2024 12:00:00 UTC");
+        alert("Cookie Created");
+      }
+    </script>
   </body>
 </html>
