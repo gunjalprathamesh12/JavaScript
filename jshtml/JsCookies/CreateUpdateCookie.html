@@ -33,6 +33,14 @@
         ("expires=Mon, 20 Dec 2024 12:00:00 UTC");
         alert("Cookie Created");
       }
+
+      function updateCookie() {
+        var q = prompt("Enter The Key to update::");
+        var r = prompt("Enter the value::");
+        document.cookie = q + "=" + r + ";";
+        alert("Cookie update sucessfully");
+        alert(document.cookie);
+      }
     </script>
   </body>
 </html>
