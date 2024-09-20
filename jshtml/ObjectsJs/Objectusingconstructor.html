@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor in object</title>
+  </head>
+  <body>
+    <h1>creating objevt using constructors</h1>
+    <script>
+      function person(name, age, city) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+      }
+
+      const param1 = person("ravi",90, "sangamner");
+      param1.nationality = "lesbian";
+      document.write(
+        "person name=" + param1.name + " " + param1.age + " " + param1.city
+      );
+    </script>
+  </body>
+</html>
