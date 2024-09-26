@@ -9,3 +9,5 @@ console.log(slicedPart);
 
 var str="PRATHAMESH";
 console.log(str.indexOf(a));
+
+console.log(str.replace("a","p"));
