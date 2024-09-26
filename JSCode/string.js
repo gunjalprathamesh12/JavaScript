@@ -15,3 +15,6 @@ console.log(str.replace("a","p"));
 let sentence = "JavaScript is fun!";
 console.log(sentence.indexOf("fun"));
 let replaced = sentence.replace("fun", "awesome");
+
+let originalString = "This is a sample string.";
+let extractedPart = originalString.slice(5, 10);
