@@ -18,3 +18,9 @@ let replaced = sentence.replace("fun", "awesome");
 
 let originalString = "This is a sample string.";
 let extractedPart = originalString.slice(5, 10);
+
+
+let text = "HELLO WORLD";
+let firstChar = text.charAt(0);
+let charCode = text.charCodeAt(0);
+let thirdChar = text[2];
