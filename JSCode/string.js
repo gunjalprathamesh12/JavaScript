@@ -28,3 +28,9 @@ let thirdChar = text[2];
 let txt = "Hello, world!";
 let length = text.length;
 console.log(length); 
+
+let firstName = "Kyle ";
+let secondName = "Robins";
+let fullName = firstName.concat(secondName);
+console.log(fullName); 
+
