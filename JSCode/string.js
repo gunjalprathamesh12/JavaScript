@@ -24,3 +24,7 @@ let text = "HELLO WORLD";
 let firstChar = text.charAt(0);
 let charCode = text.charCodeAt(0);
 let thirdChar = text[2];
+
+let txt = "Hello, world!";
+let length = text.length;
+console.log(length); 
