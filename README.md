@@ -12,6 +12,6 @@ stay tuned!!
 while (doubt)
 {
 exercise;
-if (tired) break;
+if (tired) break; 
 sweat it out;
 }
