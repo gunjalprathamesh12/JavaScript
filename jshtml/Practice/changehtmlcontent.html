@@ -7,6 +7,7 @@
   </head>
   <body>
     <h1 id="demo" onclick="de()">change</h1>
+    <button onclick="hideimg()">Hide the image</button>
     <script>
       function de() {
         document.getElementById("demo").innerHTML = "Hello World";
@@ -15,6 +16,11 @@
         document.getElementById("demo").style.display = "block";
         document.getElementById("demo").style.color = "pink";
       }
+
+      function hideimg() {
+        document.getElementById("img").style.display = "none";
+      }
     </script>
   </body>
+  <img src="Spiderman wallpaper.jpeg" alt="Spiderman" id="img" />
 </html>
