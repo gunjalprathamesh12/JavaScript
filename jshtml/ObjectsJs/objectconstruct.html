@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor in object</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      function stud(name, age, city) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+      }
+      var stud1 = new stud("Ravi", 90, "Pune");
+      var stud2 = new stud("Raj", 80, "Nashik");
+      document.getElementById("demo").innerHTML =
+        "Student name is " +
+        stud1.name +
+        " Living in " +
+        stud1.city;
+    </script>
+  </body>
+</html>
