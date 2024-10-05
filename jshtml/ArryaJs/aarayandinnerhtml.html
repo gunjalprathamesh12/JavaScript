@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArrayInnerHtml</title>
+  </head>
+  <body>
+    <p id="array">Elements of Array are =</p>
+    <script>
+      var cars = ["BMW", "Volvo", "Audi", "Meclaren"];
+      var text = "";
+      for (var i = 0; i < cars.length; i++) {
+        text += "<br>" + cars[i] + "<br>";
+      }
+      document.getElementById("array").innerHTML = text;
+    </script>
+  </body>
+</html>
