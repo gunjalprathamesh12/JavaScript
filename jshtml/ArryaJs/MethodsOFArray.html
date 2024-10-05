@@ -6,12 +6,22 @@
     <title>Array Methods</title>
   </head>
   <body>
+    <p id="demo">using to string ==</p>
+    <p id="join">after arrayJoin()==</p>
     <h4>Methods of Array</h4>
     <script>
       var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       //length method
       document.write("Lenth of Array is=" + a.length);
-    //
+      //toString()
+      document.getElementById("demo").innerHTML = a.toString();
+      document.write("<br>");
+      // at() return the element at partiular position
+      document.write("array ele at pos \n" + a.at(4));
+      // join() joiin the elements of array
+      document.getElementById("join").innerHTML = a.join("/") + "<br>";
+      a.pop();
+      document.write(a);
     </script>
   </body>
 </html>
