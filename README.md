@@ -11,7 +11,7 @@ stay tuned!!
 <br> 
 while (doubt)
 {
-exercise;
+exercise; 
 if (tired) break; 
 sweat it out;
 }
