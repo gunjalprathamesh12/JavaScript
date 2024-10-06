@@ -4,16 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 >Business Name Generator</h1>
+    <div class="container">
+      <div class="wrapper">
+        <h1 id="head1">Business Name Generator</h1>
+        <br />
+        <p>Click the button to generate your business name</p>
+        <br />
+        <input
+          type="text"
+          name=""
+          id="domain"
+          placeholder="Enter your domain"
+        />
+        <br />
+        <br>
+        <button class="btn" onclick="generate()">Generate Name</button>
+        <div class="show-box">
+
+        </div>
+      </div>
+    </div>
     <script>
-      var Adjective = prompt(
-        "Enter Adjective of your shop Name like(Amazing,Wow,Crazy etc)="
-      );
-      var shopename = prompt("Enter Your Shop Name=");
-      var cachyname = prompt("Enetr some cachy name for shop");
-      
+      function generate() {
+        const words = [
+          "fast",
+          "proffesional",
+          "digital",
+          "efficient",
+          "solid",
+          "Dynamic",
+        ];
+        let domain = document.getElementById("domain").value;
+        let word = words[Math.floor(Math.random() * words.length)];
+      }
     </script>
   </body>
 </html>
