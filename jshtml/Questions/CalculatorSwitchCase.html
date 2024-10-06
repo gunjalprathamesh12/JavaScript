@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js calaculator using switch case</title>
+  </head>
+  <body>
+    <h1>Write a simple calculator program using switch case in JavaScript.</h1>
+    <script>
+      var a = prompt("Enter num 1=");
+      var num1 = parseInt(a);
+      var b = prompt("Enter num 2=");
+      var num2 = parseInt(b);
+      window.alert(
+        "Enter which operation you want to perform\n1:Addition\n2:Substraction\n3:Multiplication\n4:Division"
+      );
+      var choice = prompt("Enter your choice!!");
+      var ch = parseInt(choice);
+      switch (ch) {
+        case 1:
+          window.alert(`Addition of ${num1} & ${num2}is=` + (num1 + num2));
+          break;
+
+        case 2:
+          window.alert(`Substraction of ${num1} & ${num2}is=` + (num1 - num2));
+          break;
+
+        case 3:
+          window.alert(`Multiplication of ${num1} & ${num2}is=` + num1 * num2);
+          break;
+
+        case 4:
+          window.alert(`Division of ${num1} & ${num2}is=` + num1 / num2);
+          break;
+
+        default:
+          window.alert("LoL!!!!!");
+          break;
+      }
+    </script>
+  </body>
+</html>
