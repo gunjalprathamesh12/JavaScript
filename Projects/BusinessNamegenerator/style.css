@@ -32,9 +32,9 @@ input{
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* button{
+.button {
     width: 180px;
-    height: 180px;
+    height: 60px;
     background-color: black;
     outline: none;
     text-align: center;
@@ -42,10 +42,9 @@ input{
     border: none;
     font-size: 18px;
     font-family: cursive;
-    margin-top: 20px;
     color: white;
-    
-} */
+    cursor: pointer; 
+}
 
 .show-box{
     color: pink;

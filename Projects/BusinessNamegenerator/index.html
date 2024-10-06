@@ -12,7 +12,6 @@
         <h1 id="head1">Business Name Generator</h1>
         <br />
         <p>Click the button to generate your business name</p>
-        <br />
         <input
           type="text"
           name=""
@@ -21,8 +20,8 @@
         />
         <br />
         <br>
-        <button class="btn" onclick="generate()">Generate Name</button>
-        <div class="show-box">
+        <button class="btn" type="button" onclick="generate()">Generate Name</button>
+        <div id="show-box">
 
         </div>
       </div>
@@ -39,6 +38,7 @@
         ];
         let domain = document.getElementById("domain").value;
         let word = words[Math.floor(Math.random() * words.length)];
+        document.getElementById('show-box').innerHTML=`${word} ${domain}`;
       }
     </script>
   </body>
