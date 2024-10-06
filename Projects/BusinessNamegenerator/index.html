@@ -19,26 +19,44 @@
           placeholder="Enter your domain"
         />
         <br />
-        <br>
-        <button class="btn" type="button" onclick="generate()">Generate Name</button>
-        <div id="show-box">
-
-        </div>
+        <br />
+        <button class="btn" type="button" onclick="generate()">
+          Generate Name
+        </button>
+        <div id="show-box"></div>
       </div>
     </div>
     <script>
       function generate() {
         const words = [
           "fast",
-          "proffesional",
+          "professional",
           "digital",
           "efficient",
           "solid",
-          "Dynamic",
+          "dynamic",
+          "innovative",
+          "stellar",
+          "agile",
+          "brilliant",
+          "exquisite",
+          "majestic",
+          "radiant",
+          "zenith",
+          "limitless",
+          "visionary",
+          "cosmic",
+          "epic",
+          "legendary",
+          "mythical",
+          "phenomenal",
+          "transcendent",
+          "unstoppable",
+          "whirlwind",
         ];
         let domain = document.getElementById("domain").value;
         let word = words[Math.floor(Math.random() * words.length)];
-        document.getElementById('show-box').innerHTML=`${word} ${domain}`;
+        document.getElementById("show-box").innerHTML = `${word} ${domain}`;
       }
     </script>
   </body>
