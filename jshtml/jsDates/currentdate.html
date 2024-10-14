@@ -6,10 +6,13 @@
     <title>Js Dates</title>
   </head>
   <body>
-    <h1>current date is</h1>
+    <h1 id="datee">current date is =</h1>
+    <p id="dute"> date is=</p>
     <script>
       const d = new Date();
-      document.write("today is " + d);
+      //   document.write("today is " + d);
+      document.getElementById("datee").innerHTML = d;
+      document.getElementById("dute").innerHTML = d;
     </script>
   </body>
 </html>
