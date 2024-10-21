@@ -3,7 +3,6 @@ var age = prompt("age=");
 age = parseInt(age);
 
 function agecheck() {
-  
   if (age < 18) {
     console.log("You are not Adult");
   } else {
