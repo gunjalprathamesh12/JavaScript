@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regex</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      var str = "welcome to pune";
+      var pattern = /pune/;
+      var position = str.search(pattern);
+      document.getElementById("result").innerHTML =
+        pattern !== -1 ? `pattern is exist` : `pattern is not existe`;
+    </script>
+  </body>
+</html>
