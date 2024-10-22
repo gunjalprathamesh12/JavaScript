@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu with Redirect</title>
+</head>
+<body>
+
+    <label for="options">Select an option:</label>
+    <select id="options" onchange="redirectToWebsite()">
+        <option value="">--Please choose an option--</option>
+        <option value="aicte">AICTE</option>
+        <option value="dte">DTE</option>
+        <option value="msbte">MSBTE</option>
+        <option value="google">GOOGLE</option>
+    </select>
+
+    <script>
+        function redirectToWebsite() {
+            const selectedValue = document.getElementById('options').value;
+            if (selectedValue === 'google') {
+                window.location.href = 'https://www.google.com';
+            }
+            else if (selectedValue === 'msbte') {
+                window.location.href = 'https://www.youtube.com';
+            }
+        }
+    </script>
+
+</body>
+</html>
