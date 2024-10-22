@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Menu with Redirect</title>
-</head>
-<body>
-
-    <label for="options">Select an option:</label>
-    <select id="options" onchange="redirectToWebsite()">
-        <option value="">--Please choose an option--</option>
-        <option value="aicte">AICTE</option>
-        <option value="dte">DTE</option>
-        <option value="msbte">MSBTE</option>
-        <option value="google">GOOGLE</option>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a pull down menu</title>
+  </head>
+  <body>
+    <label for="option">Select value</label>
+    <select id="option" onchange="redirect()">
+      <option value="">please select a value</option>
+      <option value="aicte">AICTE</option>
+      <option value="dte">DTE</option>
+      <option value="msbte">MSBTE</option>
+      <option value="google">GOOGLE</option>
+      <option value="youtube">YOUTUBE</option>
     </select>
-
     <script>
-        function redirectToWebsite() {
-            const selectedValue = document.getElementById('options').value;
-            if (selectedValue === 'google') {
-                window.location.href = 'https://www.google.com';
-            }
-            else if (selectedValue === 'msbte') {
-                window.location.href = 'https://www.youtube.com';
-            }
+      function redirect() {
+        const selectedvalue = document.getElementById("option").value;
+        if (selectedvalue == "aicte") {
+          window.open("http://www.aicte.com");
+        } else if (selectedvalue == "dte") {
+          window.open("http://www.dte.com");
+        } else if (selectedvalue == "msbte") {
+          window.open("http://www.msbte.com");
+        } else if (selectedvalue == "google") {
+          window.open("http://www.google.com");
+        } else if (selectedvalue == "youtube") {
+          window.open("https://www.youtube.com/");
         }
+      }
     </script>
-
-</body>
+  </body>
 </html>
