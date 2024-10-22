@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirect</title>
+  </head>
+  <body>
+    <h1>Redirect by choosing option</h1>
+    <label for="option">select a value</label>
+    <select id="option" onchange="redirect()">
+      <option value="">please select a value</option>
+      <option value="aicte">AICTE</option>
+      <option value="msbte">MSBTE</option>
+      <option value="google">GOOGLE</option>
+      <option value="youtube">YOUTUBE</option>
+    </select>
+    <script>
+      function redirect() {
+        const selectedvalue = document.getElementById("option").value;
+        if (selectedvalue == "google") {
+          window.open("http://www.google.com");
+        } else if (selectedvalue == "youtube") {
+          window.open("http://www.youtube.com");
+        }
+      }
+    </script>
+  </body>
+</html>
