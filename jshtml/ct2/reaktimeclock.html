@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Digital Clock</title>
+</head>
+<body>
+
+    <div id="clock"></div>
+    <button onclick="startClock()">START</button>
+    <button onclick="stopClock()">STOP</button>
+
+    <script>
+        let timer;
+
+        function startClock() {
+            timer = setInterval(() => {
+                const now = new Date();
+                document.getElementById('clock').innerText = now.toLocaleTimeString();
+            }, 1000);
+        }
+
+        function stopClock() {
+            clearInterval(timer);
+            document.getElementById('clock').innerText = '';
+        }
+    </script>
+
+</body>
+</html>
