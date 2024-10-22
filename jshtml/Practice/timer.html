@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Digital Clock</title>
+    <title>Rela timer</title>
   </head>
   <body>
     <h1 id="clock"></h1>
-    <button onclick="startClock()">START</button>
-    <button onclick="stopClock()">STOP</button>
-
+    <button onclick="starttimer()">start</button>
+    <button onclick="stopClock()">stop</button>
     <script>
-      let timer;
-
-      function startClock() {
+      function starttimer() {
+        let timer;
         timer = setInterval(() => {
           const now = new Date();
           document.getElementById("clock").innerText = now.toLocaleTimeString();
@@ -22,7 +20,8 @@
 
       function stopClock() {
         clearInterval(timer);
-        document.getElementById("clock").innerText = "click on the start to see the local timer";
+        document.getElementById("clock").innerText =
+          "click on the start to see the local timer";
       }
     </script>
   </body>
