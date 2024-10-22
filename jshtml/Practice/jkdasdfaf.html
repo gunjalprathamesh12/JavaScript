@@ -6,13 +6,21 @@
     <title>regex</title>
   </head>
   <body>
-    <p id="result"></p>
+    <label for="option">select value</label>
+    <select id="option">
+      <option value="">select a value</option>
+      <option value="aicte">AICTE</option>
+      <option value="mabte">MSBTE</option>
+      <option value="youtube">youtube</option>
+    </select>
     <script>
-      var str = "welcome to pune";
-      var pattern = /pune/;
-      var position = str.search(pattern);
-      document.getElementById("result").innerHTML =
-        pattern !== -1 ? `pattern is exist` : `pattern is not existe`;
+      var selectedvalue = document.getElementById("option").value;
+      if (selectedvalue == "aicte") {
+        window.open("http://www.aicte.com");
+      } else if (selectedvalue == "youtube") {
+        window.open("http://www.youtube.com");
+      }
+      
     </script>
   </body>
 </html>
