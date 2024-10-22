@@ -6,7 +6,7 @@
     <title>Rela timer</title>
   </head>
   <body>
-    <h1 id="clock"></h1>
+    <p id="clock"></p>
     <button onclick="starttimer()">start</button>
     <button onclick="stopClock()">stop</button>
     <script>
@@ -14,13 +14,13 @@
         let timer;
         timer = setInterval(() => {
           const now = new Date();
-          document.getElementById("clock").innerText = now.toLocaleTimeString();
+          document.getElementById("clock").innerHTML = now.toLocaleTimeString();
         }, 1000);
       }
 
       function stopClock() {
         clearInterval(timer);
-        document.getElementById("clock").innerText =
+        document.getElementById("clock").innerHTML =
           "click on the start to see the local timer";
       }
     </script>
