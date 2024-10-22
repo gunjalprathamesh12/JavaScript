@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern exp</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      const str = "Welcome to pune";
+      const pattern = /pune/;
+      const position = str.search(pattern);
+      document.getElementById("result").innerHTML =
+        position !== -1 ? `Pattern is present` : `pattern is not present`;
+    </script>
+  </body>
+</html>
