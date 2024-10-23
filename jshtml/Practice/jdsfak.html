@@ -3,12 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>winodw prop</title>
+    <title>pull down menu</title>
   </head>
   <body>
-    <h1>check the console to see the window properties</h1>
+    <label for="option">slect an option</label>
+    <select id="option" onchange="redirect()">
+      <option value="">pleae select val</option>
+      <option value="aicte">AICTE</option>
+      <option value="msbte">MSBTE</option>
+      <option value="google">GOOGLE</option>
+      <option value="youtube">YOUTUBE</option>
+    </select>
     <script>
-      Object.getOwnPropertyNames(window).forEach(console.log);
+      function redirect() {
+        var selectedvalue = document.getElementById("option").value;
+        if (selectedvalue == "aicte") {
+          window.open("http://www.aicte.com");
+        } else if (selectedvalue == "msbte") {
+          window.open("http://www.msbte.com");
+        } else if (selectedvalue == "youtube") {
+          window.open("http://www.yotube.com");
+        }
+      }
     </script>
   </body>
 </html>
