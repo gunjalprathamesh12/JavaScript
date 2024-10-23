@@ -3,14 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content change</title>
+    <title>Clock</title>
   </head>
   <body>
-    <p id="change">bbbmb</p>
-    <button onclick="chagecontent()">change</button>
+    <p id="clock"></p>
+    <button onclick="startclock()">start</button>
+    <button onclick="stopclock()">stop</button>
     <script>
-      function chagecontent() {
-        document.getElementById("change").innerHTML = "content chaged";
+      var timer;
+      function startclock() {
+        timer = setInterval(() => {
+          const now = new Date();
+          document.getElementById("clock").innerHTML = now.toLocaleTimeString();
+        });
+      }
+      function stopclock() {
+        clearInterval(timer);
+        document.getElementById("clock").innerHTML =
+          "click on the start to see the real time clock";
       }
     </script>
   </body>
