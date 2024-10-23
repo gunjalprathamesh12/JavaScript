@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moving message</title>
-</head>
-<body>
-  <style>
-    marquee{
-      font-size: 50px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      background-color: antiquewhite;
-    }
-  </style>
-  <marquee >PRATHAMESH GUNJAL</marquee>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content change</title>
+  </head>
+  <body>
+    <p id="change">bbbmb</p>
+    <button onclick="chagecontent()">change</button>
+    <script>
+      function chagecontent() {
+        document.getElementById("change").innerHTML= "content chaged";
+      }
+    </script>
+  </body>
 </html>
