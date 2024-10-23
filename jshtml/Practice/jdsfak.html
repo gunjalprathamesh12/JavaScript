@@ -16,8 +16,7 @@
           const now = new Date();
           document.getElementById("clock").innerHTML = now.toLocaleTimeString();
         });
-      }
-      function stopclock() {
+      }      function stopclock() {
         clearInterval(timer);
         document.getElementById("clock").innerHTML =
           "click on the start to see the real time clock";
