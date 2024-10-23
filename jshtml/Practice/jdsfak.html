@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RollOver Effect</title>
+    <title>Search ()</title>
   </head>
   <body>
-    <h1
-      id="textrollover"
-      onmouseover="this.style.color='red'"
-      onmouseout="this.style.color='black'"
-    >
-      move pointer to see the magic
-    </h1>
+    <p id="result"></p>
+    <script>
+      var str = "welcome to pune";
+      var pattern = /welcome/;
+      var position = str.search(pattern);
+      document.getElementById("result").innerHTML =
+        position !== -1
+          ? `the pattern\ ${pattern} \ exist into the string`
+          : `the pattern\ ${pattern} \ is not exist the string`;
+    </script>
   </body>
 </html>
