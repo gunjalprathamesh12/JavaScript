@@ -3,18 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search ()</title>
+    <title>winodw prop</title>
   </head>
   <body>
-    <p id="result"></p>
+    <h1>check the console to see the window properties</h1>
     <script>
-      var str = "welcome to pune";
-      var pattern = /welcome/;
-      var position = str.search(pattern);
-      document.getElementById("result").innerHTML =
-        position !== -1
-          ? `the pattern\ ${pattern} \ exist into the string`
-          : `the pattern\ ${pattern} \ is not exist the string`;
+      Object.getOwnPropertyNames(window).forEach(console.log);
     </script>
   </body>
 </html>
