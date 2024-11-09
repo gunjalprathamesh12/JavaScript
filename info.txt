@@ -3,4 +3,5 @@ number
 string
 bollean
 null
+
 undefined
