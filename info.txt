@@ -3,4 +3,4 @@ number
 string
 bollean
 null
-unde
+undefined
