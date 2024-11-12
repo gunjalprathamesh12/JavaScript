@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>calculator</h1>
-    <p>Here we can perform following operation
-        <br>
-        1 Addition
-        2 Substraction
-        3 Multiplication
-        4 Division
-        <br>
-        enter which opera
+    <p>
+      Here we can perform following operation
+      <br />
+      1 Addition
+      <br />
+      2 Substraction
+      <br />
+      3 Multiplication
+      <br />
+      4 Division
+      <br />
+      enter which operation you want to perform
     </p>
+    <p>
+      enter option:<input
+        type="number"
+        id="ch"
+        placeholder="enter your choice"
+      />
+    </p>
+    <button onclick="display()">display</button>
+    <h3 id="result">result is</h3>
     <script>
-        var a=100;
-        var b=200;
-        var choice;
+      function display() {
+        var a = 100;
+        var b = 200;
+        var choice = parseInt(document.getElementById("ch").value);
 
+        switch (choice) {
+          case 1:
+            var res = a + b;
+            document.getElementById("result").innerText = res;
+            break;
+          case 2:
+            var res = a - b;
+            document.getElementById("result").innerText = res;
+            break;
+          case 3:
+            var res = a * b;
+            document.getElementById("result").innerText = res;
+            break;
+          case 4:
+            var res = a / b;
+            document.getElementById("result").innerText = res;
+            break;
+          default:
+            Window.console.error("enter a valid no");
+            break;
+        }
+      }
     </script>
-    
-</body>
+  </body>
 </html>
