@@ -31,3 +31,4 @@ bik.speed="120km";
 console.log(bik.speed);
 
 
+
