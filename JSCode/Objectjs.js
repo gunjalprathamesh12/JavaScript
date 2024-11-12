@@ -29,3 +29,4 @@ bik.name="chetak";
 bik.type="EV";
 bik.speed="120km";
 console.log(bik.speed);
+
