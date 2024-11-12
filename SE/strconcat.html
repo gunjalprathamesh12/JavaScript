@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>str concat</h1>
+    <p>
+      enter first string:<input
+        type="text"
+        placeholder="enter text1"
+        id="str1"
+      />
+    </p>
+    <br />
+    <p>
+      enter second string:<input
+        type="text"
+        placeholder="enter text2"
+        id="str2"
+      />
+    </p>
+    <h1 id="concaat">after concatination str is=</h1>
+    <button onclick="display()">show concat</button>
+    <script>
+      function display() {
+        st1 = document.getElementById("str1").value;
+        st2 = document.getElementById("str2").value;
+        var ss = st1 +" "+ st2;
+        document.getElementById("concaat").innerHTML = ss;
+      }
+    </script>
+  </body>
+</html>
