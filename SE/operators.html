@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>operators</title>
+  </head>
+  <body>
+    <h1>Arithmatic operations</h1>
+    Enter first number<input type="number" placeholder="enter no" id="num1" />
+    Enter second number<input
+      type="number"
+      placeholder="enter second number"
+      id="num2"
+    />
+    <p id="res">result of operation is =</p>
+    <script>
+      var n1 = document.getElementById("num1").value;
+      var n2 = document.getElementById("num2").value;
+      function resu() {
+        var result = n1 + n2;
+        document.getElementById("res").innerHTML = result;
+      }
+      resu();   
+    </script>
+  </body>
+</html>
