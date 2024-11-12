@@ -14,3 +14,18 @@ car.name = "bmw";
 car.color = "balck";
 console.log(car.name);
 console.log(car.color);
+
+//
+var bike={
+  name:"beneli",
+  engine:"V8",
+  speed:"500km"
+};
+console.log("bike name="+bike.name);
+//
+
+var bik=new Object();
+bik.name="chetak";
+bik.type="EV";
+bik.speed="120km";
+console.log(bik.speed);
