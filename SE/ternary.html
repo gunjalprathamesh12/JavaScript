@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Enter your age=<input
+        type="number"
+        id="ag"
+        placeholder="enter your age"
+      />
+    </p>
+    <button onclick="checkage()">check age</button>
+    <p id="result"></p>
+    <script>
+      function checkage() {
+        var vay = document.getElementById("ag").value;
+        var stud = vay >= 18 ? "adult" : "minor";
+        document.getElementById("result").innerHTML = stud;
+      }
+    </script>
+  </body>
+</html>
