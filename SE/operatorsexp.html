@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,6 +15,31 @@
       document.write("Substraction of 10 and 20 =" + (a - b));
       document.write("Multiplication of 10 and 20 =" + (a * b));
       document.write("Division of 10 and 20 =" + (a / b));
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmatic</title>
+  </head>
+  <body>
+    <h1>Aithmatic operatoion</h1>
+    <p>enter no 1:<input type="number" id="n1" /></p>
+    <br />
+    <p>enter no 2:<input type="number" id="n2" /></p>
+    <h3 id="result">result of operation is=</h3>
+    <button onclick="display()">display res</button>
+    <script>
+      function display() {
+        num1 = parseInt(document.getElementById("n1").value);
+        num2 = parseInt(document.getElementById("n2").value);
+        var res = (num1 + num2);
+        document.getElementById("result").innerText = res;
+      }
     </script>
   </body>
 </html>
