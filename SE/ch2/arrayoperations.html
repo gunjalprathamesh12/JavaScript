@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array operations</title>
+  </head>
+  <body>
+    <h1>push elements into array</h1>
+    <p id="carss"></p>
+    <button onclick="addele()">add luna</button>
+    <script>
+      var car = ["BMW ", "Lambo ", "Ferrari ", "Bugatti"];
+      document.getElementById("carss").innerHTML = car;
+      window.alert("do you want to add new elements");
+      function addele() {
+        car.push("luna");
+        document.getElementById("carss").innerHTML = car;
+      }
+
+      var newcar = window.prompt("Enter car name=");
+      document.getElementById("carss").innerHTML = car.newcar;
+    </script>
+  </body>
+</html>
