@@ -7,21 +7,26 @@
   </head>
   <body>
     <h1>js array</h1>
+
+    <p id="carss">cars objects are</p>
     <script lang="javascript" type="text/javascript">
       var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       for (var i = 0; i < 10; i++) {
-        document.write("array elements are=" + a[i]+"<br>");
+        document.write("array elements are=" + a[i] + "<br>");
       }
       document.write("-------<br>");
 
-      var b=new Array();
+      var b = new Array();
       b[0] = 1;
       b[1] = 2;
       b[2] = 3;
       b[3] = 4;
       for (var o = 0; o < 4; o++) {
-        document.write(b[o]+"<br>");
+        document.write(b[o] + "<br>");
       }
+
+      var cars = ["BMW", "Audi", "Lambo", "bugatti"];
+      document.getElementById("carss").innerHTML = cars;
     </script>
   </body>
 </html>
