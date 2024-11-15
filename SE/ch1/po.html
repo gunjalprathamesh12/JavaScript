@@ -6,9 +6,16 @@
     <title>Document</title>
   </head>
   <body>
+    <p>
+      enetr your age=<input
+        type="number"
+        id="res"
+        placeholder="enter your age"
+      />
+    </p>
     <script>
-      var age = 20;
-      var result = age >= 18 ? "Ready to vote" : "soon you are going to vote";
+      var age = document.getElementById("res").value;
+      var result = age > 18 ? "Ready to vote" : "soon you are going to vote";
       document.write(result);
     </script>
   </body>
