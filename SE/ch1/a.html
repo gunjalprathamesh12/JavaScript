@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <p id="str"></p>
   <body>
     <script>
       // var a=[1,2,3,4,5];
@@ -14,16 +15,18 @@
       // document.write(a[3]);
       // document.write(a[4]);
 
-    //   var a = new Array(5);
-    //   a[0] = 1;
-    //   a[1] = 2;
-    //   a[2] = 3;
-    //   a[3] = 4;
-    //   a[4] = 5;
-    //   for (var i = 0; i < 5; i++) {
-    //     document.write(a[i]);
-    //   }
-    
+      //   var a = new Array(5);
+      //   a[0] = 1;
+      //   a[1] = 2;
+      //   a[2] = 3;
+      //   a[3] = 4;
+      //   a[4] = 5;
+      //   for (var i = 0; i < 5; i++) {
+      //     document.write(a[i]);
+      //   }
+      var a = ["volvo", "audi", "luna"];
+      document.getElementById("str").innerHTML = a.toString();
+      document.write(a.sort());
     </script>
   </body>
 </html>
