@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Validation</h1>
+    <p>enter username:<input type="text" id="userid" placeholder="userid" /></p>
+    <p>
+      enter password<input
+        type="password"
+        id="password"
+        placeholder="password"
+      />
+    </p>
+    <button onclick="validate()">validate</button>
+    <p id="result"></p>
+    <script>
+      function validate() {
+        var uid = document.getElementById("userid").value;
+        var pass = document.getElementById("password").value;
+        var result = document.getElementById("result");
+        switch (uid) {
+          case "user1":
+            if (pass === "user1") {
+              result.innerText = "Sucessfully login";
+            } else {
+              result.innerText = "No!";
+            }
+            break;
+
+          case "user2":
+            if (pass === "user2") {
+              result.innerText = "Sucessfully login";
+            } else {
+              result.innerText= "No!";
+            }
+            break;
+
+          default:
+            window.alert("pls enter correct id or pass");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
