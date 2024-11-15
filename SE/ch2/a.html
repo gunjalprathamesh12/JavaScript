@@ -9,16 +9,18 @@
     <p id="msg"></p>
     <script>
       var fruit = ["Kiwi", "Apple", "Banana", "mango", "orange"];
+      fruit.push("cucumber");
       document.getElementById("msg").innerHTML = fruit.join(",");
       //sort
       var a = [5, 3, 4, 2, 1];
       document.write(a.sort());
       //fruits
-      var flowers = new Array(3);
+      var flowers = new Array(4);
       flowers[0] = "Rose";
       flowers[1] = "mogra";
       flowers[2] = "chafa";
-      for (var i = 0; i < 3; i++) {
+      
+      for (var i = 0; i < 4; i++) {
         document.write(flowers[i]+"<br>");
       }
     </script>
