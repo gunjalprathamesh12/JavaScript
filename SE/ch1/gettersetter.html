@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var person = {
+        name: "pranav",
+        age: 90,
+        language: "English",
+
+        get lang() {
+          return this.language;
+        },
+      };
+      document.write(person.language);
+    </script>
+    <script>
+      var car = {
+        name: "luna",
+        model: "a1",
+        lang: "",
+        setlang() {
+          this.lang = "english";
+        },
+      };
+      document.write(car.lang);
+    </script>
+  </body>
+</html>
