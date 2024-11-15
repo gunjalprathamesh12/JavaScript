@@ -16,7 +16,7 @@
     <button onclick="agecheck()">eligible or not</button>
     <script>
       function agecheck() {
-        var age = document.getElementById("res").value;
+        var age = parseInt(document.getElementById("res").value);
         var result = age > 18 ? "Ready to vote" : "soon you are going to vote";
         document.write(result);
       }
