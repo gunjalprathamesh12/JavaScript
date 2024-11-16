@@ -12,17 +12,18 @@
     </h1>
     <script>
       function countvowel() {
-        var str = "PRATHAMESH";
+        var str = "prathamesh";
         var count = 0;
         for (var i = 0; i < str.length; i++) {
           if (
-            str[i] == "a" ||
-            str[i] == "e" ||
-            str[i] == "i" ||
-            str[i] == "o" ||
-            str[i] == "u"
-          ) {
-            count=count+1;
+            str[i] === "a" ||
+            str[i] === "e" ||
+            str[i] === "i" ||
+            str[i] === "o" ||
+            str[i] === "u"
+          ) 
+          {
+            count+=1;
           }
         }
         document.write("No of vowels is=" + count);
