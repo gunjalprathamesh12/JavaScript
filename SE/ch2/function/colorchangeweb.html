@@ -23,9 +23,10 @@
       <script>
         function display() {
           var color = document.getElementById("colortype").value;
+          var newWindow = window.open("", "", "width=400,height=400");
           if (color === "red") {
-            window.open("", "", "width=300 height=300" );
-            document.getElementById("demo").style.color = "red";
+            newWindow.document.body.style.backgroundColor = "red";
+
           }
         }
       </script>
