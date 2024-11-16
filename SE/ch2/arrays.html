@@ -8,9 +8,12 @@
   <body>
     <p id="elements"></p>
     <script>
-      var fruits = ["pink", "sunflower", "chafa", "rose", "mogra"];
-      document.getElementById("elements").innerHTML = fruits;
-      window.alert(fruits);
+      var elements = [3, 2, 4, 5, 7, 1, 8, 9, 10];
+      var assending = elements.sort((a, b) => a - b);
+      document.write(assending);
+
+      var rev = elements.reverse();
+      document.write(rev);
     </script>
   </body>
 </html>
