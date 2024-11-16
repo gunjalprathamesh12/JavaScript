@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array elements are=1,2,3,4,5,6,7,8,9,10</h1>
+    <p>
+      enter element you wnat to remove from array<input
+        type="number"
+        id="n1"
+        placeholder="enter no"
+      />
+    </p>
+    <br />
+    <p id="result">after deleting element</p>
+    <button onclick="deleteno()">delete no</button>
+    <script>
+      function deleteno() {
+        var no = parseInt(document.getElementById("n1").value);
+        var arrray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        for(var i=0;i<10;i++)
+      {
+        if(arrray[i]==no)
+      {
+        
+        arrray.pop(arrray[i]);
+      }
+      }
+      }
+      document.getElementById("result").innerText=arrray;
+    </script>
+  </body>
+</html>
