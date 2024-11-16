@@ -13,7 +13,13 @@
       var no1 = [11, 1, 2, 3, 12, 13, 2, 14, 15, 16, 12, 17];
       var combination = no.concat(no1);
       var removeduplic = [...new Set(combination)];
-      document.getElementById("result").innerHTML = removeduplic;
+      //   document.getElementById("result").innerHTML = removeduplic;
+      // display at specific length
+      function display() {
+        removeduplic.length=5;
+        document.getElementById("result").innerHTML = removeduplic;
+      }
+      display();
     </script>
   </body>
 </html>
