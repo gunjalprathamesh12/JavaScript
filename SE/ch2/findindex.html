@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array elements are=1,2,3,4,5,6,7,8,9,10</h1>
+    <p>
+      enter element to find index<input
+        type="number"
+        id="n1"
+        placeholder="enter no"
+      />
+    </p>
+    <br />
+    <p id="result"></p>
+    <button onclick="findindex()">findindex</button>
+    <script>
+      function findindex() {
+        var no = parseInt(document.getElementById("n1").value);
+        var arrray = [10, 9, 3, 4, 5, 6, 7, 8, 9, 10];
+        for (var i = 0; i < 10; i++) {
+          if (arrray[i] === no) {
+            document.write("Index of no= " + no + "Is =" + i);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
