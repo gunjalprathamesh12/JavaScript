@@ -10,7 +10,9 @@
     <p id="result"></p>
     <script>
       var no = [1, 1, 1, 2, 2, 1, 3, 4, 5, 6, 3, 4, 7, 8, 9, 10];
-      var removeduplic = [...new Set(no)];
+      var no1 = [11, 1, 2, 3, 12, 13, 2, 14, 15, 16, 12, 17];
+      var combination = no.concat(no1);
+      var removeduplic = [...new Set(combination)];
       document.getElementById("result").innerHTML = removeduplic;
     </script>
   </body>
