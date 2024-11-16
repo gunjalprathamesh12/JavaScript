@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo">
+      <h1>
+        Write a function that prompts the user for a color and uses what they
+        select to set the background color of the new webpage opened .
+      </h1>
+      <p>
+        enter color:<input
+          type="text"
+          id="colortype"
+          placeholder="enter color"
+        />
+      </p>
+
+      <button onclick="display()">display</button>
+      <script>
+        function display() {
+          var color = document.getElementById("colortype").value;
+          if (color === "red") {
+            window.open("", "", "width=300 height=300" );
+            document.getElementById("demo").style.color = "red";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
