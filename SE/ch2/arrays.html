@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <button onclick="openwin()">openwin</button>
     <script>
-       var color=window.prompt("Enter color");
+        function openwin(){
+      var color = window.prompt("Enter color");
+      var newwindow = window.open("", "", "width=500 height=500");
+      if(color==="red")
+      {
+        newwindow.document.body.style.backgroundColor="red";
+      }
+      else if(color==="pink")
+      {
+        newwindow.document.body.style.backgroundColor="blue";
 
+      }
+    }
     </script>
-    
-</body>
+  </body>
 </html>
