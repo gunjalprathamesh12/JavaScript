@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p>insert str at pos</p>
+    <p>enter pos<input type="number" id="index" placeholder="pos" /></p> -->
+    <button onclick="replace()">replace</button>
+    <p id="result"></p>
+    <script>
+      function replace() {
+        // var pos = document.getElementById("index").value;
+        // var str = "i am prathamesh";
+        var res = insertStringAt("i am prathamesh", 5, "hello ");
+        document.write(res);
+      }
+    </script>
+  </body>
+</html>
