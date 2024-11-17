@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write JavaScript code to perform following operations on string. (Use
+      split() method) Input String: "Sudha Narayana Murthy" Display output as
+      First Name: Sudha Middle Name: Narayana Last Name: Murthy
+    </p>
+    <script>
+      var fullname = "Sudha Narayan Murty";
+      var nameparts = fullname.split(" ");
+      var fname = nameparts[0];
+      var mname = nameparts[1];
+      var lname = nameparts[2];
+      document.write("Fname is= " + fname);
+      document.write("mname is= " + mname);
+      document.write("lname is= " + lname);
+    </script>
+  </body>
+</html>
