@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>charto unicode</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>character to unicode</h1>
     <script>
-        var ch='a';
-        var convert=ch
+      var ch = "a";
+      var code = ch.charCodeAt(0);
+      document.write(code);
     </script>
-    
-</body>
+    <script>
+      var a = 97;
+      var co = a.charCodeAt(0);
+      document.write(co);
+    </script>
+  </body>
 </html>
