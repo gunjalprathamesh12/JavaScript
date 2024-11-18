@@ -6,21 +6,37 @@
     <title>Document</title>
   </head>
   <body>
+    <p>calculator</p>
+    <br />
+    <p id="result"></p>
+    <button onclick="display()">display</button>
     <script>
-      var a = {
-        name: "ravi",
-        age: 20,
-      };
-      a.hieght = 90;
-      document.write(a.hieght);
-      document.write(a.name);
-      document.write(a.age);
-      delete a.age;
-      document.write(a.age);
-      
-      var b = new Object();
-      b.hieght = 90;
-      document.write(b.hieght);
+      function display() {
+        var n1 = parseInt(window.prompt("Enter no 1: "));
+        var n2 = parseInt(window.prompt("Enter no 2: "));
+        var ch = parseInt(
+          window.prompt(
+            "1:Addition  2:Substraction 3:Multiplication 4:Division: enter your choice "
+          )
+        );
+        switch (ch) {
+          case 1:
+            document.getElementById("result").innerHTML = n1 + n2;
+            break;
+          case 2:
+            document.getElementById("result").innerHTML = n1 - n2;
+            break;
+          case 3:
+            document.getElementById("result").innerHTML = n1 * n2;
+            break;
+          case 3:
+            document.getElementById("result").innerHTML = n1 / n2;
+            break;
+          default:
+            window.Error("Enter vaild choice");
+            break;
+        }
+      }
     </script>
   </body>
 </html>
