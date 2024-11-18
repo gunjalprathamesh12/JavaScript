@@ -18,7 +18,12 @@
         // var n2 = parseInt(document.getElementById("no2").value);
         var n1 = parseInt(window.prompt("Enter no 1"));
         var n2 = parseInt(window.prompt("Enter no 2"));
-        document.getElementById("result").innerHTML = n1 + n2;
+        var n3 = parseInt(window.prompt("Enter no 3"));
+        if (n1 == n2 && n1 == n3) {
+          document.getElementById("result").innerHTML = "n1 == n2 && n1 == n3";
+        } else if (n1 == n2 || n1 == n3) {
+          document.getElementById("result").innerHTML = "n1 == n2 || n1 == n3";
+        }
       }
     </script>
   </body>
