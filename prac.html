@@ -1,1 +1,42 @@
-s
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>calculator</p>
+    <br />
+    <p id="result"></p>
+    <button onclick="display()">display</button>
+    <script>
+      function display() {
+        var n1 = parseInt(window.prompt("Enter no 1: "));
+        var n2 = parseInt(window.prompt("Enter no 2: "));
+        var ch = parseInt(
+          window.prompt(
+            "1:Addition  2:Substraction 3:Multiplication 4:Division: enter your choice "
+          )
+        );
+        switch (ch) {
+          case 1:
+            document.getElementById("result").innerHTML = n1 + n2;
+            break;
+          case 2:
+            document.getElementById("result").innerHTML = n1 - n2;
+            break;
+          case 3:
+            document.getElementById("result").innerHTML = n1 * n2;
+            break;
+          case 3:
+            document.getElementById("result").innerHTML = n1 / n2;
+            break;
+          default:
+            window.Error("Enter vaild choice");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
