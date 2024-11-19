@@ -6,16 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <p>getter exp</p>
     <script>
       var person = {
-        name: "Ravi",
+        firstname: "Ravi",
+        lastname: "gunjal",
         age: 20,
-        setlang(value) {
-          person.lang=value;
-        }
+        eyecolor: "blue",
       };
-      document.write(person.lang);
+      delete person.eyecolor;
+      document.write(person.firstname);
+      document.write(person.lastname);
+      document.write(person.age);
+      document.write(person.eyecolor);
     </script>
   </body>
 </html>
