@@ -6,39 +6,14 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>User validation</h1>
-    <p>enter user name:<input type="text" id="user" placeholder="uname" /></p>
-    <p>
-      enter password:<input
-        type="password"
-        id="password"
-        placeholder="password"
-      />
-    </p>
-    <br />
-    <p id="result"></p>
-    <button onclick="display()">display</button>
+    <p>palindrome or not</p>
     <script>
-      function display() {
-        var uname = document.getElementById("user").innerHTML = value;
-        var pass = document.getElementById("PASSWORD").innerHTML = value;
-        switch (uname) {
-          case "user1":
-            if (pass === "pass1") {
-                result.innerText = "valid password for user1.";            }
-            else {
-                result.innerText = "Invalid password for user1.";
-            }
-            break;
-          case "user2":
-            if (pass === "pass2") {
-              document.getElementById("result").innerHTML = "Valid user";
-            }
-            break;
-          default:
-            document.getElementById("result").innerHTML = "Not a valid user";
-            break;
-        }
+      var str1 = "nitin";
+      var strrev = str1.split("").reverse().join("");
+      if (str1 === strrev) {
+        document.write("palindrome");
+      } else {
+        document.write("no palindrome");
       }
     </script>
   </body>
