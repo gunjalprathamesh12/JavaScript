@@ -6,37 +6,16 @@
     <title>Document</title>
   </head>
   <body>
-    <p>calculator</p>
-    <br />
-    <p id="result"></p>
-    <button onclick="display()">display</button>
+    <p>getter exp</p>
     <script>
-      function display() {
-        var n1 = parseInt(window.prompt("Enter no 1: "));
-        var n2 = parseInt(window.prompt("Enter no 2: "));
-        var ch = parseInt(
-          window.prompt(
-            "1:Addition  2:Substraction 3:Multiplication 4:Division: enter your choice "
-          )
-        );
-        switch (ch) {
-          case 1:
-            document.getElementById("result").innerHTML = n1 + n2;
-            break;
-          case 2:
-            document.getElementById("result").innerHTML = n1 - n2;
-            break;
-          case 3:
-            document.getElementById("result").innerHTML = n1 * n2;
-            break;
-          case 3:
-            document.getElementById("result").innerHTML = n1 / n2;
-            break;
-          default:
-            window.Error("Enter vaild choice");
-            break;
+      var person = {
+        name: "Ravi",
+        age: 20,
+        setlang(value) {
+          person.lang=value;
         }
-      }
+      };
+      document.write(person.lang);
     </script>
   </body>
 </html>
