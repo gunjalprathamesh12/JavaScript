@@ -6,11 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    <p>String is="I will Fail"</p>
     <script>
-      var str = "I will Fail";
-      var update = str.replace("Fail", "Pass");
-      document.write(update);
+      var name = "Sudha Narayan Murty";
+      var nameparts = name.split(" ");
+      var fname = nameparts[0];
+      var mname = nameparts[1];
+      var lname = nameparts[2];
+      document.write(fname+"<br>");
+      document.write(mname);
+      document.write(lname);
     </script>
   </body>
 </html>
