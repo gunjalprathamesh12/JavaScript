@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <script>
-      var person = {
-        firstname: "Ravi",
-        lastname: "gunjal",
-        age: 20,
-        eyecolor: "blue",
-      };
-      delete person.eyecolor;
-      document.write(person.firstname);
-      document.write(person.lastname);
-      document.write(person.age);
-      document.write(person.eyecolor);
-    </script>
-  </body>
+</head>
+<body>
+    <h1>User validation</h1>
+    <p>
+        enter user name:<input type="text" id="user" placeholder="uname"/>
+    </p>
+    <p>
+        enter password:<input type="password" id="password" placeholder="password"/>
+    </p>
+    <br>
+    <button onclick="display()">display</button>
+    
+</body>
 </html>
