@@ -20,12 +20,14 @@
     <button onclick="display()">display</button>
     <script>
       function display() {
-        var uname = (document.getElementById("user").innerHTML = value);
-        var pass = (document.getElementById("PASSWORD").innerHTML = value);
+        var uname = document.getElementById("user").innerHTML = value;
+        var pass = document.getElementById("PASSWORD").innerHTML = value;
         switch (uname) {
           case "user1":
             if (pass === "pass1") {
-              document.getElementById("result").innerHTML = "Valid user";
+                result.innerText = "valid password for user1.";            }
+            else {
+                result.innerText = "Invalid password for user1.";
             }
             break;
           case "user2":
