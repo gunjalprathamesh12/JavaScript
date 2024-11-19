@@ -6,14 +6,14 @@
     <title>Document</title>
   </head>
   <body>
-    <p>palindrome or not</p>
+    <p id="res"></p>
     <script>
-      var str1 = "nitin";
-      var strrev = str1.split("").reverse().join("");
-      if (str1 === strrev) {
-        document.write("palindrome");
+      var str = window.prompt("Enter string");
+      var s = str.split("").reverse().join("");
+      if (str === s) {
+        document.getElementById("res").inerHTML = "Palindrome";
       } else {
-        document.write("no palindrome");
+        document.getElementById("res").innerHTML = "No palindrome";
       }
     </script>
   </body>
