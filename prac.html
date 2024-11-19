@@ -16,17 +16,28 @@
       />
     </p>
     <br />
+    <p id="result"></p>
     <button onclick="display()">display</button>
     <script>
-function display(){
-      var uname = (document.getElementById("user").innerHTML = value);
-      var pass = (document.getElementById("PASSWORD").innerHTML = value);
-      switch(uname)
-      {
-        case "user1":
-            if(uname)
+      function display() {
+        var uname = (document.getElementById("user").innerHTML = value);
+        var pass = (document.getElementById("PASSWORD").innerHTML = value);
+        switch (uname) {
+          case "user1":
+            if (pass === "pass1") {
+              document.getElementById("result").innerHTML = "Valid user";
+            }
+            break;
+          case "user2":
+            if (pass === "pass2") {
+              document.getElementById("result").innerHTML = "Valid user";
+            }
+            break;
+          default:
+            document.getElementById("result").innerHTML = "Not a valid user";
+            break;
+        }
       }
-}
     </script>
   </body>
 </html>
