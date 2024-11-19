@@ -6,15 +6,11 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="res"></p>
+    <p>String is="I will Fail"</p>
     <script>
-      var str = window.prompt("Enter string");
-      var s = str.split("").reverse().join("");
-      if (str === s) {
-        document.getElementById("res").inerHTML = "Palindrome";
-      } else {
-        document.getElementById("res").innerHTML = "No palindrome";
-      }
+      var str = "I will Fail";
+      var update = str.replace("Fail", "Pass");
+      document.write(update);
     </script>
   </body>
 </html>
