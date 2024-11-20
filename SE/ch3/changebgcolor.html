@@ -6,18 +6,27 @@
     <title>Document</title>
   </head>
   <body>
-    <label for="option">select color</label>
+    <label for="option">Select Color</label>
     <select id="option" onchange="change()">
-      <option value="">selecte value</option>
-      <option value="red">red</option>
-      <option value="green">green</option>
-      <option value="blue">blue</option>
-      <option value="yellow">yellow</option>
+      <option value="">Select value</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
     </select>
+
     <script>
-      var selectedvalue = document.getElementById("option").value;
-      if (selectedvalue === "red") {
-        document.bgColor = "red";
+      function change() {
+        var selectedValue = document.getElementById("option").value;
+        if (selectedValue == "red") {
+          document.body.style.backgroundColor = "red";
+        } else if (selectedValue == "green") {
+          document.body.style.backgroundColor = "green";
+        } else if (selectedValue == "blue") {
+          document.body.style.backgroundColor = "blue";
+        } else if (selectedValue == "yellow") {
+          document.body.style.backgroundColor = "yellow";
+        }
       }
     </script>
   </body>
