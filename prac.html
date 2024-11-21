@@ -6,10 +6,37 @@
     <title>Document</title>
   </head>
   <body>
-    <button onclick="openwin()">Open win</button>
+    <label for="option">Select image</label>
+    <select id="option" onchange="openwin()">
+      <option value="">select value</option>
+      <option value="https://wallpapercave.com/wp/wp7465405.jpg+1">
+        Image 1
+      </option>
+      <option value="https://wallpapercave.com/wp/wp2739956.jpg+2">
+        Image 2
+      </option>
+      <option
+        value="https://th.bing.com/th/id/R.716febcfe26e3f5a011a52f72f88cdfc?rik=hO8WWQ70aqGhxw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f10%2fCars-movie-disney-wallpaper-desktop.jpg&ehk=vCXxsPvBVdmV7VvlGntQPh5yW33PB0NAcsaoK9fiG2A%3d&risl=&pid=ImgRaw&r=0"
+      >
+        Image 3
+      </option>
+      <option
+        value="https://th.bing.com/th/id/R.716febcfe26e3f5a011a52f72f88cdfc?rik=hO8WWQ70aqGhxw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f10%2fCars-movie-disney-wallpaper-desktop.jpg&ehk=vCXxsPvBVdmV7VvlGntQPh5yW33PB0NAcsaoK9fiG2A%3d&risl=&pid=ImgRaw&r=0"
+      >
+        Image 4
+      </option>
+    </select>
     <script>
       function openwin() {
-        window.open("", "", "width=300,height=300");
+        var selectedimg = document.getElementById("option").value;
+        if (selectedimg) {
+          var newwin = window.open("", "", "width=300,height=300");
+          newwin.document.write(
+            "<img src='" +
+              selectedImage +
+              "' alt='Selected Image' style='width:100%; height:auto;'>"
+          );
+        }
       }
     </script>
   </body>

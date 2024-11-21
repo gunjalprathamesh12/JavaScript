@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Bar Example</title>
+    <script>
+        // Function to change the status bar text when mouse hovers over the link
+        function showStatus() {
+            window.status = "MSBTE";  // Change status bar text
+        }
+
+        // Function to clear the status bar text when mouse moves out of the link
+        function clearStatus() {
+            window.status = "";  // Clear the status bar text
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Mouse Over and Mouse Out Example</h1>
+
+    <!-- Link with event handlers to modify the status bar text -->
+    <a href="#" onmouseover="showStatus()" onmouseout="clearStatus()">Hover over this link</a>
+
+</body>
+</html>
