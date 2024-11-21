@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+   
+</head>
+<body>
+    <h1>User Information</h1>
+
+    <form id="userForm">
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" name="middleName"><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname"><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="emailMessage"></div>
+
+    <script>
+        function submitForm() {
+            //get data
+            var name = document.getElementById("name").value;
+            var middleName = document.getElementById("middleName").value;
+            var surname = document.getElementById("surname").value;
+
+            document.getElementById("name").disabled = true;
+            document.getElementById("middleName").disabled = true;
+            document.getElementById("surname").disabled = true;
+
+            document.getElementById("name").style.backgroundColor = "red";
+            document.getElementById("middleName").style.backgroundColor = "red";
+            document.getElementById("surname").style.backgroundColor = "red";
+
+            // Construct the email ID (assuming the user provides only first and last names)
+            var emailID = name.toLowerCase() + "." + surname.toLowerCase() + "@msbte.com";
+
+            // Display the email ID message
+            document.getElementById("emailMessage").innerHTML = "Your Email ID is: " + emailID;
+        }
+    </script>
+
+</body>
+</html>
