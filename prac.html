@@ -6,11 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    <button onclick="open()">OpennewWindow</button>
     <script>
-      function open() {
-        window.open("", "", "width=500 height=500");
+      function onover() {
+        window.status = "MSBTE";
+      }
+      function onout() {
+        window.status = "";
       }
     </script>
+    <h1>Move mouse cursor ont the above link</h1>
+    <a href="MSBTE" onmouseover="onover()" onmouseout="onout()">Link</a>
   </body>
 </html>
