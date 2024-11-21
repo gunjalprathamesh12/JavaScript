@@ -6,14 +6,27 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hover on the above link</h1>
-    <a href="MSBTE" onmouseover="show()" onmouseout="dontshow()">Hover on me</a>
+    <h1>Select color</h1>
+    <label for="option">color</label>
+    <select id="option" onchange="change()">
+      <option value="">select values</option>
+      <option value="red">red</option>
+      <option value="pink">pink</option>
+      <option value="blue">blue</option>
+      <option value="green">green</option>
+    </select>
     <script>
-      function show() {
-        window.status = "MSBTE";
-      }
-      function dontshow() {
-        window.status = "";
+      function change() {
+        var selectedcolor = document.getElementById("option").value;
+        if (selectedcolor == "red") {
+          document.body.style.backgroundColor = "red";
+        } else if (selectedcolor == "pink") {
+          document.body.style.backgroundColor = "pink";
+        } else if (selectedcolor == "blue") {
+          document.body.style.backgroundColor = "blue";
+        } else if (selectedcolor == "green") {
+          document.body.style.backgroundColor = "green";
+        }
       }
     </script>
   </body>
