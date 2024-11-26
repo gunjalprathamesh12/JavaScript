@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write a Java script that displays textboxes for accepting name & email ID
+      & a submit button. Write Java script code such that when the user clicks
+      on submit button (1) Name Validation (2) Email ID validation
+    </p>
+    <br />
+    <br />
+    <p>
+      enter Name
+      <input type="text" id="name" placeholder="name" />
+    </p>
+    <br />
+    <p>
+      enter email id=<input type="email" id="emailid" placeholder="email" />
+    </p>
+    <br />
+    <button onclick="validate()">submit</button>
+    <p id="res"></p>
+    <script>
+      function validate() {
+        var n = document.getElementById("name").value;
+        var e = document.getElementById("emailid").value;
+        switch (n) {
+          case "user1":
+            if (e == "user1@gmail.com") {
+              document.getElementById("res").innerHTML =
+                "Valid emaiid and user";
+            } else {
+              document.getElementById("res").innerHTML =
+                "Invalid user and email";
+            }
+            break;
+          case "user2":
+            if (e == "user2@gmail.com") {
+              document.getElementById("res").innerHTML =
+                "Valid emaiid and user";
+            } else {
+              document.getElementById("res").innerHTML =
+                "Invalid user and email";
+            }
+            break;
+          default:
+            document.getElementById("res").innerHTML = "Invalid";
+        }
+      }
+    </script>
+  </body>
+</html>
