@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write a Java script to modify the status bar using on MouseOver and on
+      MouseOut with links. When the user moves his mouse over the links, it will
+      display “MSBTE” in the status bar. When the user moves his mouse away from
+      the link the status bar will display nothing
+    </p>
+    <br />
+    <br />
+    <br />
+    <a href="MSBTE" id="h" onmouseover="onover()" onmouseout="">Hover on me</a>
+    <script>
+      function onover() {
+        window.status = "MSBTE";
+      }
+      function onout(){
+        window.status="";
+      }
+    </script>
+  </body>
+</html>
