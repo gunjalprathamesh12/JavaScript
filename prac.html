@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>  
+<body>
+  <h1>Browser is</h1>
+  <button onclick="displaybrowser()">Display Browser</button>
+  <script>
+    function displaybrowser()
+    {
+      const userAgent=Navigator.userAgent;
+      if(userAgent.includes("Chrome"))return "Chrome";
+      if(userAgent.includes("edge"))return "edge";
+      if(userAgent.includes("Opera"))return "Opera";
+    }
+
+  </script>
+  
 </body>
 </html>
