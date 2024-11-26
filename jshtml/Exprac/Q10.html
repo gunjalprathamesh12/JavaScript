@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write a JavaScript program to validate user accounts for multiple set of
+      user ID and password (using switch case statement).
+    </p>
+    <p>
+      enter your id
+      <input type="text" id="uid" placeholder="id" />
+    </p>
+    <br />
+    <p>
+      enter password
+      <input type="password" id="pass" placeholder="password" />
+    </p>
+    <br />
+    <button onclick="validate()">login</button>
+    <br />
+    <p id="result"></p>
+    <script>
+      function validate() {
+        var uid = document.getElementById("uid").value;
+        var pass = document.getElementById("pass").value;
+        switch (uid) {
+          case "user1":
+            if (pass == "user1") {
+              document.getElementById("result").innerHTML = "Valid user";
+            } else {
+              document.getElementById("result").innerHTML = "Invalid user";
+            }
+            break;
+          case "user2":
+            if (pass == "user2") {
+              document.getElementById("result").innerHTML = "Valid user";
+            } else {
+              document.getElementById("result").innerHTML = "Invalid user";
+            }
+            break;
+          default:
+            document.getElementById("result").innerHTML = "Invalid user";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
