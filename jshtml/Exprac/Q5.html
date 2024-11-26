@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write a Java script to create person object with properties firstname,
+      lastname, age, eyecolor, delete eyecolor property and display remaining
+      properties of person object
+    </p>
+    <script>
+      var person = {
+        fname: "Prathamesh",
+        lname: "gunjal",
+        age: 20,
+        eyecolor: "black",
+      };
+      delete person.eyecolor;
+      document.write(person.fname);
+      document.write(person.lname);
+      document.write(person.age);
+      document.write(person.eyecolor);
+    </script>
+  </body>
+</html>
