@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write a JavaScript function to count the number of vowels in a given
+      string
+    </p>
+    <script>
+      var str = "prathamesh";
+      var vowelcount = 0;
+      var conconentcount = 0;
+      for (var i = 0; i < str.length; i++) {
+        if (
+          str[i] == "a" ||
+          str[i] == "e" ||
+          str[i] == "i" ||
+          str[i] == "o" ||
+          str[i] == "u"
+        ) {
+          vowelcount += 1;
+        } else {
+          conconentcount += 1;
+        }
+      }
+      document.write("vowels is=" + vowelcount);
+      document.write("concnents is=" + conconentcount);
+    </script>
+  </body>
+</html>
