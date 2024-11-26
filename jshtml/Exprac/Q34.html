@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write HTML code to design a form that displays textboxes for accepting
+      UserID and Aadhar No. and a SUBMIT button. UserID should contain 10
+      alphanumeric characters and must start with Capital Letter. Aadhar No.
+      should contain 12 digits in the format nnnn nnnn nnnn. Write JavaScript
+      code to validate the UserID and Aadhar No. when the user clicks on SUBMIT
+      button
+    </p>
+    <h2>Simple Form Validation</h2>
+    <form>
+      <label for="userId">UserID:</label><br />
+      <input
+        type="text"
+        id="userId"
+        name="userId"
+        placeholder="Enter UserID"
+        required
+      /><br /><br />
+
+      <label for="aadharNo">Aadhar No:</label><br />
+      <input
+        type="text"
+        id="aadharNo"
+        name="aadharNo"
+        placeholder="nnnn nnnn nnnn"
+        required
+      /><br /><br />
+
+      <button type="submit" onclick="validateForm()">SUBMIT</button>
+    </form>
+    <script>
+      function validateForm() {
+        const userId = document.getElementById("userId").value;
+        const aadharNo = document.getElementById("aadharNo").value;
+
+        // Regular expressions
+        const userIdPattern = /^[A-Z][A-Za-z0-9]{9}$/; // Starts with a capital letter and has 10 alphanumeric characters
+        const aadharPattern = /^\d{4} \d{4} \d{4}$/; // 12 digits in the format nnnn nnnn nnnn
+
+        if (!userIdPattern.test(userId)) {
+          alert(
+            "Invalid UserID. It should start with a capital letter and be 10 alphanumeric characters long."
+          );
+          return false;
+        }
+
+        if (!aadharPattern.test(aadharNo)) {
+          alert(
+            "Invalid Aadhar No. It should be 12 digits in the format nnnn nnnn nnnn."
+          );
+          return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
+  </body>
+</html>
