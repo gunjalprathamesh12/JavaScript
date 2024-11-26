@@ -6,16 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Browser is</h1>
-    <button onclick="displaybrowser()">Display Browser</button>
     <script>
-      function displaybrowser() {
-        const userAgent = Navigator.userAgent;
+      function getBrowser() {
+        const userAgent = navigator.userAgent;
+
         if (userAgent.includes("Chrome")) return "Chrome";
-        if (userAgent.includes("edge")) return "edge";
+        if (userAgent.includes("Firefox")) return "Firefox";
+        if (userAgent.includes("Safari")) return "Safari";
+        if (userAgent.includes("Edge")) return "Edge";
         if (userAgent.includes("Opera")) return "Opera";
-        return "unknown browser";
+        return "Unknown Browser";
       }
+
+      document.write("The browser is:", getBrowser());
     </script>
   </body>
 </html>

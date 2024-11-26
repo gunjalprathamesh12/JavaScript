@@ -40,6 +40,7 @@
       your cookie:
       <p id="p1"></p>
       <br />
+      <button onclick="displaycookie()">displaycookie</button>
     </form>
 
     <script>
@@ -50,6 +51,9 @@
           document.getElementById("t2").value;
         ("expires=Mon, 20 Dec 2024 12:00:00 UTC");
         alert("Cookie Created");
+      }
+      function displaycookie() {
+        alert(document.cookie);
       }
 
       function ReadCookie() {
