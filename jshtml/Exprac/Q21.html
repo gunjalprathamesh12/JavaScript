@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write a JavaScript function to merge two array & removes all duplicate
+      values
+    </p>
+    <p id="res"></p>
+    <button type="button" oncanplay="val()">display</button>
+    <script>
+      function val() {
+        var a = [1, 2, 3, 4, 5, 6, 7];
+        var b = [2, 3, 4, 5, 6, 7, 8, 9, , 10];
+        var c = a.concat(b);
+        var merg = [...new Set(c)];
+        document.write("After removing duplicate values");
+        document.getElementById("res").innerHTML = merg;
+      }
+    </script>
+  </body>
+</html>
