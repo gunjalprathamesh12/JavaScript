@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write a javascript to create option list containing list of images and
+      then display images in new window as per selection.
+    </p>
+    <h1>Select image</h1>
+    <label for="option">iamge</label>
+    <select id="option" onchange="change()">
+      <option value="">select values</option>
+      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image1</option>
+      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image2</option>
+      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image3</option>
+      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image4</option>
+    </select>
+    <script>
+      function change() {
+        var selectedImage = document.getElementById("option").value;
+
+        // Check if a valid image is selected
+        if (selectedImage) {
+          // Open a new window to display the selected image
+          var newWindow = window.open("", "", "width=600,height=400");
+          newWindow.document.write(
+            "<html><head><title>Selected Image</title></head><body>"
+          );
+          newWindow.document.write(
+            '<img src="' +
+              selectedImage +
+              '" alt="Selected Image" style="max-width:100%; max-height:100%;"/>'
+          );
+          newWindow.document.write("</body></html>");
+          newWindow.document.close();
+        }
+      }
+    </script>
+  </body>
+</html>
