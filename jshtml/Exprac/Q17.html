@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write HTML script that will display dropdown list containing options such
+      as Red, Green, Blue and Yellow. Write a JavaScript program such that when
+      the user selects any options. It will change the background colour of
+      webpage.
+    </p>
+    <label for="option">select color</label>
+    <select id="option" onchange="chage()">
+        <option value="">select color</option>
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="pink">pink</option>
+      <option value="blue">blue</option>
+    </select>
+    <script>
+      function chage() {
+        var selectedcolor = document.getElementById("option").value;
+        if (selectedcolor == "red") {
+          document.body.style.backgroundColor = "red";
+        } else if (selectedcolor == "green") {
+          document.body.style.backgroundColor = "green";
+        } else if (selectedcolor == "pink") {
+          document.body.style.backgroundColor = "pink";
+        } else if (selectedcolor == "blue") {
+          document.body.style.backgroundColor = "blue";
+        }
+      }
+    </script>
+  </body>
+</html>
