@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Design a webpage that displays a form that contains an input for user name
+      and password. User is prompted to enter the input user name and password
+      and password become value of the cookies. Write the javascript function
+      for storing the cookies.
+    </p>
+    <h3>Js Cookie</h3>
+    <form action="">
+      <p>
+        Enter your user name=<input type="text" placeholder="name" id="uname" />
+      </p>
+      <br />
+      <p>
+        enter password
+        <input type="password" id="pass" placeholder="password" />
+      </p>
+      <br />
+      <button onclick="createCookie()">createCookie</button>
+      <button onclick="displaycookie()">displaycookie</button>
+    </form>
+    <script>
+      function createCookie() {
+        document.cookie =
+          "Uname=" + document.getElementById("uname").value + "Password=";
+        document.getElementById("pass").value;
+        alert("cookie created");
+      }
+      function displaycookie() {
+        alert(document.cookie);
+        s;
+      }
+    </script>
+  </body>
+</html>
