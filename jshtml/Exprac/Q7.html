@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write JavaScript to create a object "student" with properties roll number
+      name, branch, year. Delete branch property and display remaining
+      properties of student object
+    </p>
+    <script>
+      var stud = {
+        fname: "Prathamesh",
+        lname: "gunjal",
+        age: 20,
+        eyecolor: "black",
+        branch: "it",
+      };
+      delete stud.branch;
+      document.write(stud.fname);
+      document.write(stud.lname);
+      document.write(stud.age);
+      document.write(stud.eyecolor);
+    </script>
+  </body>
+</html>
