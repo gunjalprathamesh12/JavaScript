@@ -1,0 +1,19 @@
+<!-- 36. Write a javascript program to changing the contents of a window .Write a javascript syntax to accessing elements of another child window. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Window Content</title>
+    <script>
+      function changeContent() {
+        document.getElementById("content").innerHTML =
+          "The content has been changed!";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript Window Content Change</h1>
+
+    <p id="content">This is the original content of the window.</p>
+    <button onclick="changeContent()">Click</button>
+  </body>
+</html>

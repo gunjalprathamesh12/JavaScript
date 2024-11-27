@@ -1,0 +1,28 @@
+<!-- 35. Write a JavaScript function to insert a string within a string at a particular position -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function insertString(original, toInsert, position) {
+        if (position > original.length) {
+          position = original.length;
+        }
+        return (
+          original.slice(0, position) + toInsert + original.slice(position)
+        );
+      }
+
+      let or = prompt("Enter the first string");
+      let str = prompt("Enter second string");
+      let pos = prompt("Enter Position");
+
+      let result = insertString(or, str, pos);
+      document.write(result);
+    </script>
+  </body>
+</html>

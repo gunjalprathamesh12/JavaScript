@@ -1,0 +1,28 @@
+<!-- 25. Write a javascript program to demonstrate java intrinsic function -->
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h3>Demonstration of Simple JavaScript Functions</h3>
+
+    <button onclick="run()">Click to Run Functions</button>
+
+    <script>
+      function run() {
+        var num = parseInt("123");
+        alert("parseInt('123') = " + num);
+
+        var str = String(456);
+        alert("String(456) = " + str);
+
+        var randomNum = Math.random();
+        alert("Math.random() = " + randomNum);
+
+        var upperStr = "hello".toUpperCase();
+        alert("toUpperCase('hello') = " + upperStr);
+
+        var isInvalid = isNaN("abc");
+        alert("isNaN('abc') = " + isInvalid);
+      }
+    </script>
+  </body>
+</html>

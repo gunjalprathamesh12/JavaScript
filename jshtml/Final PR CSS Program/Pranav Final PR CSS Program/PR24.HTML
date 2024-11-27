@@ -1,0 +1,48 @@
+<!-- 24. Write a JavaScript program to create rollover effect for three images. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rollover Effect for Images</title>
+  </head>
+  <body>
+    <h3>Rollover Effect for Images</h3>
+
+    <img
+      id="image1"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LsWIQoPSRWLlYyZ08t65BVgaGwTKI7RPrw&s0"
+      alt="Image 1"
+      onmouseover="changeImage('image1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFv2fSnI4zhhNlb65yorRKL2z_38QLDnT47w&s')"
+      onmouseout="resetImage('image1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LsWIQoPSRWLlYyZ08t65BVgaGwTKI7RPrw&s0')"
+    />
+    <br /><br />
+
+    <img
+      id="image2"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LsWIQoPSRWLlYyZ08t65BVgaGwTKI7RPrw&s0"
+      alt="Image 2"
+      onmouseover="changeImage('image2','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFv2fSnI4zhhNlb65yorRKL2z_38QLDnT47w&s')"
+      onmouseout="resetImage('image2','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LsWIQoPSRWLlYyZ08t65BVgaGwTKI7RPrw&s0')"
+    />
+    <br /><br />
+
+    <img
+      id="image3"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LsWIQoPSRWLlYyZ08t65BVgaGwTKI7RPrw&s0"
+      alt="Image 3"
+      onmouseover="changeImage('image3','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFv2fSnI4zhhNlb65yorRKL2z_38QLDnT47w&s')"
+      onmouseout="resetImage('image3','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LsWIQoPSRWLlYyZ08t65BVgaGwTKI7RPrw&s0')"
+    />
+
+    <script>
+      function changeImage(imageId, newSrc) {
+        document.getElementById(imageId).src = newSrc;
+      }
+
+      function resetImage(imageId, originalSrc) {
+        document.getElementById(imageId).src = originalSrc;
+      }
+    </script>
+  </body>
+</html>

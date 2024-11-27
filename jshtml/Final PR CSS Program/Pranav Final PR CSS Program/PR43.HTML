@@ -1,0 +1,26 @@
+<!-- 43. Write a JavaScript function that checks whether a passed string is palindrome or not. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Check</title>
+  </head>
+  <body>
+    <script>
+      function isPalindrome(str) {
+        const Str1 = str.toLowerCase();
+
+        const reversedStr = Str1.split("").reverse().join("");
+
+        if (Str1 === reversedStr) {
+          document.write("Is a palindrome: " + str);
+        } else {
+          document.write("Is not a palindrome: " + str);
+        }
+      }
+      let str = prompt("Enter the string");
+      isPalindrome(str);
+    </script>
+  </body>
+</html>

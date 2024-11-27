@@ -1,0 +1,26 @@
+<!-- 17. Write HTML script that will display dropdown list containing options such as Red, Green, Blue and Yellow. Write a JavaScript program such that when the user selects any options. It will change the background colour of webpage. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Background Color</title>
+  </head>
+  <body>
+    <h3>Select a color to change the background:</h3>
+
+    <select id="colorSelect" onchange="changeBackgroundColor()">
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+
+    <script>
+      function changeBackgroundColor() {
+        var selectedColor = document.getElementById("colorSelect").value;
+        document.body.style.backgroundColor = selectedColor;
+      }
+    </script>
+  </body>
+</html>

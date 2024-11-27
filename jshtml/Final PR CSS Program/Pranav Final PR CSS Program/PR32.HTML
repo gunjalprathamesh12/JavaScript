@@ -1,0 +1,53 @@
+<!-- 32. Write HTML code to design a form that displays textboxes for accepting UserID and Aadhar No. and a SUBMIT button. UserID should contain 10 alphanumeric characters and must start with Capital Letter. Aadhar No. should contain 12 digits in the format nnnn nnnn nnnn. Write JavaScript code to validate the UserID and Aadhar No. when the user clicks on SUBMIT button -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h3>Form Validation</h3>
+
+    <!-- Form to accept UserID and Aadhar No. -->
+    <form onsubmit="return validateForm()">
+      <label for="userID"
+        >UserID (10 alphanumeric, starts with uppercase):</label
+      ><br />
+      <input type="text" id="userID" required /><br /><br />
+
+      <label for="aadhar"
+        >Aadhar No. (12 digits in the format nnnn nnnn nnnn):</label
+      ><br />
+      <input type="text" id="aadhar" required /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="errorMessage"></p>
+
+    <script>
+      function validateForm() {
+        var userID = document.getElementById("userID").value;
+        var aadhar = document.getElementById("aadhar").value;
+        let pr1 = /^[A-Z][A-Za-z0-9]{9}$/;
+        if (!pr1.test(userID)) {
+          document.getElementById("errorMessage").innerText =
+            "UserID must be 10 alphanumeric characters and start with a capital letter.";
+          return false;
+        }
+
+        let pr = /^\d{4}\s\d{4}\s\d{4}$/;
+        if (!pr.test(aadhar)) {
+          document.getElementById("errorMessage").innerText =
+            "Aadhar No. must be in the format nnnn nnnn nnnn.";
+          return false;
+        }
+
+        document.getElementById("errorMessage").innerText = "";
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
+  </body>
+</html>

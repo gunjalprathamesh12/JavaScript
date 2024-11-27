@@ -1,0 +1,35 @@
+<!-- 16. Write a JavaScript for the folding tree menu. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Folding Tree Menu</title>
+  </head>
+  <body>
+    <h3>Folding Tree Menu</h3>
+
+    <ul id="menu">
+      <li>
+        <span onclick="toggleMenu(this)">Fruits</span>
+        <ul style="display: none">
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Orange</li>
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+      function toggleMenu(element) {
+        var nestedList = element.nextElementSibling;
+
+        if (nestedList.style.display === "block") {
+          nestedList.style.display = "none";
+        } else {
+          nestedList.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

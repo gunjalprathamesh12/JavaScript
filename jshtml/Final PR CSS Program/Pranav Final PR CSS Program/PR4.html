@@ -1,0 +1,25 @@
+<!--4. Write a JavaScript to create a pull-down menu with four options [AICTE, DTE, MSBTE, GOOGLE]. Once the user will select one of the options then user will be redirected to that site. -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Select an Option</h3>
+<select id="menu" onchange="redirect()">
+    <option value="">--Select--</option>
+    <option value="https://www.aicte-india.org/">AICTE</option>
+    <option value="https://www.dtemaharashtra.gov.in/">DTE</option>
+    <option value="https://msbte.org.in/">MSBTE</option>
+    <option value="https://www.google.com/">GOOGLE</option>
+</select>
+
+<script>
+function redirect() {
+    var site = document.getElementById("menu").value;
+    if (site) {
+        window.location.href = site;
+    }
+}
+</script>
+
+</body>
+</html>

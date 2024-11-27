@@ -1,0 +1,31 @@
+<!-- 27. Write a JavaScript function to check the first character of a string is uppercase or not. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Uppercase</title>
+  </head>
+  <body>
+    <h3>Check if First Character is Uppercase</h3>
+
+    <input type="text" id="inputString" placeholder="Enter string" />
+    <button onclick="checkUppercase()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+      function checkUppercase() {
+        var str = document.getElementById("inputString").value;
+
+        if (str[0] === str[0].toUpperCase()) {
+          document.getElementById("result").innerText =
+            "First character is uppercase!";
+        } else {
+          document.getElementById("result").innerText =
+            "First character is not uppercase.";
+        }
+      }
+    </script>
+  </body>
+</html>

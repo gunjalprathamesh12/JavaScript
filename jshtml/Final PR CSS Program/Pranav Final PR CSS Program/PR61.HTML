@@ -1,0 +1,21 @@
+<!-- 61. Write a Java Script code to display 5 elements of array in sorted order. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="myFunction()">try it</button>
+    <p id="demo"></p>
+    <script>
+      var f = ["b", "o", "a", "m", "d"];
+      document.getElementById("demo").innerHTML = f;
+      function myFunction() {
+        f.sort();
+        document.getElementById("demo").innerHTML = f;
+      }
+    </script>
+  </body>
+</html>

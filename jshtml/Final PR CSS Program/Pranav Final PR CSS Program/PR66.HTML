@@ -1,0 +1,36 @@
+<!-- 66. Write a JavaScript that identifies a running browser. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Identify Browser</title>
+  </head>
+  <body>
+    <h2>Identify the Running Browser</h2>
+    <p id="browserInfo"></p>
+
+    <script>
+      function getBrowser() {
+        var userAgent = navigator.userAgent;
+
+        if (userAgent.indexOf("Chrome") > -1) {
+          return "Google Chrome";
+        } else if (userAgent.indexOf("Firefox") > -1) {
+          return "Mozilla Firefox";
+        } else if (userAgent.indexOf("Safari") > -1) {
+          return "Apple Safari";
+        } else if (userAgent.indexOf("Edge") > -1) {
+          return "Microsoft Edge";
+        } else if (userAgent.indexOf("Trident") > -1) {
+          return "Internet Explorer";
+        } else {
+          return "Unknown Browser";
+        }
+      }
+
+      document.getElementById("browserInfo").innerHTML =
+        "You are using: " + getBrowser();
+    </script>
+  </body>
+</html>

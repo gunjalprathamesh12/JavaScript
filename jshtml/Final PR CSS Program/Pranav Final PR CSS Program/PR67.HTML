@@ -1,0 +1,45 @@
+<!-- 67. Write HTML Script that displays textboxes for accepting Name, middlename, Surname of the user and a Submit button. Write proper JavaScript such that when the user clicks on submit button i) all texboxes must get disabled and change the color to “RED”. and with respective labels. 3 ii) Constructs the mailID as .@msbte.com and displays mail ID as message. (Ex. If user enters Rajni as name and Pathak as surname mailID will be constructed com) as rajni.pathak@msbte. -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>User Information</h3>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" /><br /><br />
+
+    <label for="middleName">Middle Name:</label>
+    <input type="text" id="middleName" /><br /><br />
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" /><br /><br />
+
+    <button onclick="submitForm()">Submit</button>
+
+    <p id="emailMessage"></p>
+
+    <script>
+      function submitForm() {
+        var firstName = document.getElementById("firstName").value;
+        var middleName = document.getElementById("middleName").value;
+        var lastName = document.getElementById("lastName").value;
+
+        var emailID =
+          firstName.toLowerCase() + "." + lastName.toLowerCase() + "@msbte.com";
+
+        document.getElementById("emailMessage").innerText =
+          "Your email ID: " + emailID;
+
+        document.getElementById("firstName").disabled = true;
+        document.getElementById("middleName").disabled = true;
+        document.getElementById("lastName").disabled = true;
+
+        document.getElementById("firstName").style.backgroundColor = "red";
+        document.getElementById("middleName").style.backgroundColor;
+
+        document.getElementById("firstName").style.color = "white";
+        document.getElementById("middleName").style.color = "white";
+        document.getElementById("lastName").style.color = "white";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 3.Write a simple calculator program using switch case in JavaScript. -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var no1, no2, res, ch;
+      no1 = parseInt(prompt("Enter first number:"));
+      no2 = parseInt(prompt("Enter second number:"));
+      ch = prompt("Enter:: \n + \n - \n * \n / \n %");
+      switch (ch) {
+        case "+":
+          res = no1 + no2;
+          document.write("Addition=" + res);
+          break;
+        case "-":
+          res = no1 - no2;
+          document.write("Substraction=" + res);
+          break;
+        case "*":
+          res = no1 * no2;
+          document.write("Multiplication=" + res);
+          break;
+        case "/":
+          div = no1 / no2;
+          document.write("Division=" + div);
+          break;
+        case "%":
+          div = no1 % no2;
+          document.write("Division=" + div);
+          break;
+        default:
+          document.writeln("Invalid");
+      }
+    </script>
+  </body>
+</html>

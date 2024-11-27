@@ -1,0 +1,21 @@
+<!-- 20. Write a program to print sum of even numbers between 1 to 100 using for loop. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum of Even Numbers</title>
+  </head>
+  <body>
+    <h3>Sum of Even Numbers between 1 and 100:</h3>
+
+    <script>
+      let sum = 0;
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+          sum += i;
+        }
+      }
+
+      document.write("Sum of even numbers between 1 and 100 is: " + sum);
+    </script>
+  </body>
+</html>

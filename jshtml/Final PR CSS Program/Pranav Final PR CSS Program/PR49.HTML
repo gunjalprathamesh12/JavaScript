@@ -1,0 +1,25 @@
+<!-- 49. Write a JavaScript that displays all properties of window object. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Object Properties</title>
+  </head>
+  <body>
+    <h2>Properties of the Window Object</h2>
+    <div id="window-properties"></div>
+
+    <script>
+      var propertiesList = "<ul>";
+
+      for (var prop in window) {
+        propertiesList += "<li>" + prop + "</li>";
+      }
+
+      propertiesList += "</ul>";
+
+      document.getElementById("window-properties").innerHTML = propertiesList;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!-- 71. Write a JavaScript for creating following frame structure : -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create a Frame</title>
+  </head>
+  <frameset rows="30%,*" border="1">
+    <!-- Corrected 'sre' to 'src' and 'nare' to 'name' -->
+    <frame src="frame1.html" name="a" />
+    <frameset cols="50%,*" border="1">
+      <frame src="frame2.html" name="b" />
+      <!-- Corrected the closing of the second frame tag -->
+      <frame src="frame3.html" name="c" />
+    </frameset>
+  </frameset>
+</html>

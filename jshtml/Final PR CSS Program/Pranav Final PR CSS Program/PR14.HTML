@@ -1,0 +1,48 @@
+<!-- 14. Develop a JavaScript program to create Rotating Banner Ads. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rotating Banner Ads</title>
+    <script>
+      var banners = [
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHef3LrXb68qAZ0bDOwOvVvE9zRmhPqam7LA&s",
+          url: "https://www.google.com",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTFuoBtLZe6gJmm1dxp54iqNWbzH9N_1apSA&s",
+          url: "https://www.youtube.com",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyFQLRorwL6_a9uXD6WPj7u5JO7iTSseIL3A&s",
+          url: "https://www.wikipedia.org",
+        },
+      ];
+      var currentIndex = 0;
+
+      function rotateBanner() {
+        var banner = banners[currentIndex];
+        document.getElementById("adImage").src = banner.image;
+        document.getElementById("adLink").href = banner.url;
+        currentIndex = (currentIndex + 1) % banners.length;
+      }
+
+      setInterval(rotateBanner, 2000); // Rotate every 3 seconds
+    </script>
+  </head>
+  <body>
+    <h3>Rotating Banner Ads</h3>
+    <a id="adLink" href="https://www.google.com" target="_blank">
+      <img
+        id="adImage"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQ37XUFJn_Jjb4g7_sCqEzer2LnSKYZPLog&s"
+        width="600"
+        height="150"
+      />
+    </a>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- 26. Write a javascript program to validate email ID of the user using regular expression. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Validation</title>
+  </head>
+  <body>
+    <h3>Email Validation</h3>
+
+    <input type="text" id="email" placeholder="Enter your email" />
+    <button onclick="validateEmail()">Validate</button>
+
+    <p id="message"></p>
+
+    <script>
+      function validateEmail() {
+        var email = document.getElementById("email").value;
+        var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (pattern.test(email)) {
+          document.getElementById("message").innerHTML = "Valid Email!";
+        } else {
+          document.getElementById("message").innerHTML = "Invalid Email!";
+        }
+      }
+    </script>
+  </body>
+</html>

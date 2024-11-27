@@ -1,0 +1,28 @@
+<!-- 23. Write a JavaScript function to check whether a given value is valid IP value or not. -->
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h3>Check Valid IP Address</h3>
+
+    <script>
+      function isValidIP(ip) {
+        var pattern = /^\d{1,3}(\.\d{1,3}){3}$/;
+        if (pattern.test(ip)) {
+          var parts = ip.split(".");
+          for (var i = 0; i < parts.length; i++) {
+            if (parseInt(parts[i]) < 0 || parseInt(parts[i]) > 255) {
+              return false;
+            }
+          }
+          return true;
+        }
+        return false;
+      }
+      let ip1 = "192.168.1.1";
+      let ip2 = "999.999.999.999";
+
+      document.write("Is '" + ip1 + "' a valid IP? " + isValidIP(ip1) + "<br>");
+      document.write("Is '" + ip2 + "' a valid IP? " + isValidIP(ip2));
+    </script>
+  </body>
+</html>

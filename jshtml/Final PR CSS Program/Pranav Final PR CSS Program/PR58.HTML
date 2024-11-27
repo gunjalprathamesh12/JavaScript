@@ -1,0 +1,44 @@
+<!-- 58. Write a javascript to create option list containing list of images and then display images in new window as per selection. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Selector</title>
+  </head>
+  <body>
+    <h2>Select an Image</h2>
+    <select id="imageSelector" onchange="displayImage()">
+      <option value="none">Select an Image</option>
+      <option
+        value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFv2fSnI4zhhNlb65yorRKL2z_38QLDnT47w&s"
+      >
+        Image 1
+      </option>
+      <option
+        value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFv2fSnI4zhhNlb65yorRKL2z_38QLDnT47w&s"
+      >
+        Image 2
+      </option>
+      <option
+        value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFv2fSnI4zhhNlb65yorRKL2z_38QLDnT47w&s"
+      >
+        Image 3
+      </option>
+    </select>
+
+    <script>
+      function displayImage() {
+        var imageUrl = document.getElementById("imageSelector").value;
+
+        if (imageUrl === "none") return;
+
+        var newWindow = window.open("", "_blank", "width=500,height=500");
+
+        newWindow.document.write(
+          '<img src="' + imageUrl + '" alt="Selected Image">'
+        );
+      }
+    </script>
+  </body>
+</html>

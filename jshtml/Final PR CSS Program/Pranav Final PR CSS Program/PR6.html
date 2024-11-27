@@ -1,0 +1,42 @@
+<!-- 6.Write a javascript program to create a silde show with the group of six images, also simulate the next and previous transition between slides in your javascript. -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Image Slideshow</h3>
+
+<img id="slideshow" src="https://via.placeholder.com/400?text=Image+1" width="400" height="300">
+
+<br><br>
+
+<button onclick="previousSlide()">Previous</button>
+<button onclick="nextSlide()">Next</button>
+
+<script>
+var images = [
+    "https://via.placeholder.com/400?text=Image+1",
+    "https://via.placeholder.com/400?text=Image+2",
+    "https://via.placeholder.com/400?text=Image+3",
+    "https://via.placeholder.com/400?text=Image+4",
+    "https://via.placeholder.com/400?text=Image+5",
+    "https://via.placeholder.com/400?text=Image+6"
+];
+var currentIndex = 0;
+
+function showSlide(index) {
+    document.getElementById("slideshow").src = images[index];
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showSlide(currentIndex);
+}
+
+function previousSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showSlide(currentIndex);
+}
+</script>
+
+</body>
+</html>

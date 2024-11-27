@@ -1,0 +1,53 @@
+<!-- 2. Write HTML Script that displays dropdownlist containing options NewDelhi, Mumbai, Bangalore. Write proper JavaScript such that when the user selects any options corresponding description of about 20 words and image of the city appear in table which appears below on the same page. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Select a City</h3>
+    <select id="cities" onchange="showCity()">
+      <option value="">--Select--</option>
+      <option value="NewDelhi">New Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Bangalore">Bangalore</option>
+    </select>
+
+    <table id="cityTable" border="1" style="display: none; margin-top: 20px">
+      <tr>
+        <td id="cityName"></td>
+        <td id="cityDesc"></td>
+        <td><img id="cityImg" width="100" /></td>
+      </tr>
+    </table>
+
+    <script>
+      function showCity() {
+        var city = document.getElementById("cities").value;
+        if (city) {
+          var data = {
+            NewDelhi: [
+              "New Delhi",
+              "Capital of India",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJtWjFjV1J06xqgYlVjmdsdhUGpAAreuoVtA&s",
+            ],
+            Mumbai: [
+              "Mumbai",
+              "Financial hub of India",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF5VOtMIdKbVYoLxawds-ZGKsUq1ep3JalOA&s",
+            ],
+            Bangalore: [
+              "Bangalore",
+              "IT hub of India",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDzJJIFNTRmEZqi4eSLMAw_JGmqxk74fggSg&s",
+            ],
+          };
+          document.getElementById("cityName").innerText = data[city][0];
+          document.getElementById("cityDesc").innerText = data[city][1];
+          document.getElementById("cityImg").src = data[city][2];
+          document.getElementById("cityTable").style.display = "table";
+        } else {
+          document.getElementById("cityTable").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

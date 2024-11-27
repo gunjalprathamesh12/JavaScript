@@ -1,0 +1,21 @@
+<!-- 9. Write a JavaScript program that creates a scrolling text on the status line of a window. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrolling Text</title>
+    <script>
+      var text = "Welcome to MSBTE! Learn JavaScript Easily! ";
+      var pos = 0;
+
+      function scrollText() {
+        document.title = text.substring(pos) + text.substring(0, pos);
+        pos = (pos + 1) % text.length;
+      }
+
+      setInterval(scrollText, 150);
+    </script>
+  </head>
+  <body>
+    <h3>Check the status bar for scrolling text!</h3>
+  </body>
+</html>

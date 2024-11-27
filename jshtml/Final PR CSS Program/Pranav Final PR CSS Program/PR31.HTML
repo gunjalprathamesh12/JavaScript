@@ -1,0 +1,25 @@
+<!-- 31. Write a JavaScript function to count the number of vowels in a given string -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function vov(str) {
+        var v = "aeiouAEIOU";
+        var count = 0;
+        for (count1 of str) {
+          if (v.includes(count1)) {
+            count++;
+          }
+        }
+        return count;
+      }
+      const v1 = prompt("Enter string=");
+      document.write("Number of vowel are =" + vov(v1));
+    </script>
+  </body>
+</html>

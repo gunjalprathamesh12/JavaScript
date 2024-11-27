@@ -1,0 +1,43 @@
+<!-- 55. Write a javascript program to calculate add, sub, multiplication and division of two number (input from user). Form should contain two text boxes to input numbers of four buttons for addition, subtraction, multiplication and division. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <h2>Simple</h2>
+
+    <input type="text" id="num1" placeholder="Enter first number" />
+    <br /><br />
+    <input type="text" id="num2" placeholder="Enter second number" />
+    <br /><br />
+    <input type="text" id="result" placeholder="Result" readonly />
+    <br /><br />
+
+    <button onclick="performOperation('add')">ADDITION</button>
+    <button onclick="performOperation('subtract')">SUBTRACTION</button>
+    <button onclick="performOperation('mul')">MULTIPLICATION</button>
+    <button onclick="performOperation('div')">DIVISION</button>
+
+    <script>
+      function performOperation(operation) {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        let result;
+
+        if (operation === "add") {
+          result = num1 + num2;
+        } else if (operation === "subtract") {
+          result = num1 - num2;
+        } else if (operation === "mul") {
+          result = num1 * num2;
+        } else if (operation === "div") {
+          result = num1 / num2;
+        }
+
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>

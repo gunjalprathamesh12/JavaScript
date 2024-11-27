@@ -1,0 +1,24 @@
+<!-- 21. Write a JavaScript function to merge two array & removes all duplicate values -->
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h3>Merge Arrays and Remove Duplicates</h3>
+
+    <script>
+      function mergeArrays(arr1, arr2) {
+        let mergedArray = arr1.concat(arr2);
+
+        let uniqueArray = [...new Set(mergedArray)];
+
+        return uniqueArray;
+      }
+
+      let array1 = [1, 2, 3, 4, 5];
+      let array2 = [4, 5, 6, 7, 8];
+
+      let result = mergeArrays(array1, array2);
+
+      document.write("Merged Array with Unique Values:=" + result.join(", "));
+    </script>
+  </body>
+</html>

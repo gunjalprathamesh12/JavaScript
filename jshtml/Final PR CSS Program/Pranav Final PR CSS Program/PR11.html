@@ -1,0 +1,44 @@
+<!-- 11. Write a JavaScript program to link banner advertisements to different URLs. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Banner Advertisement</title>
+    <script>
+      var banners = [
+        {
+          image: "https://via.placeholder.com/600x150?text=Ad+1",
+          url: "https://example.com/ad1",
+        },
+        {
+          image: "https://via.placeholder.com/600x150?text=Ad+2",
+          url: "https://example.com/ad2",
+        },
+        {
+          image: "https://via.placeholder.com/600x150?text=Ad+3",
+          url: "https://example.com/ad3",
+        },
+      ];
+      var currentIndex = 0;
+
+      function showBanner() {
+        var banner = banners[currentIndex];
+        document.getElementById("adImage").src = banner.image;
+        document.getElementById("adLink").href = banner.url;
+        currentIndex = (currentIndex + 1) % banners.length;
+      }
+
+      setInterval(showBanner, 2000);
+    </script>
+  </head>
+  <body>
+    <h3>Advertisement</h3>
+    <a id="adLink" href="https://example.com/ad1" target="_blank">
+      <img
+        id="adImage"
+        src="https://via.placeholder.com/600x150?text=Ad+1"
+        width="600"
+        height="150"
+      />
+    </a>
+  </body>
+</html>

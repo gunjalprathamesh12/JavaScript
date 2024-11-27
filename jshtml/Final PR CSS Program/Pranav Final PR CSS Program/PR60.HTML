@@ -1,0 +1,27 @@
+<!-- 60. Write a javascript function to generate Fibonacci series till user defined limit. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fib(limit) {
+        var a = 0,
+          b = 1,
+          next;
+        document.write("Fibonacci series up to " + limit + "<br>");
+        while (a <= limit) {
+          document.write(a + "<br>");
+          next = a + b;
+          a = b;
+          b = next;
+        }
+      }
+      var ul = parseInt(window.prompt("Enter a limit="), 10);
+      fib(ul);
+    </script>
+  </body>
+</html>

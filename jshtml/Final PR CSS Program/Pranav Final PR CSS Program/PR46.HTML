@@ -1,0 +1,35 @@
+<!-- 46. Write JavaScript code to perform following operations on string. (Use split() method)
+Input String: "Sudha Narayana Murthy"
+Display output as
+First Name: Sudha
+Middle Name: Narayana
+Last Name: Murthy -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Split Example</title>
+</head>
+<body>
+
+<h3>Click to see the name split:</h3>
+
+<button onclick="splitName()">Show Name</button>
+
+<p id="result"></p>
+
+<script>
+function splitName() {
+    var fullName = "Sudha Narayana Murthy";  
+    var nameParts = fullName.split(" ");     
+    document.getElementById("result").innerHTML = 
+        "First Name: " + nameParts[0] + "<br>" + 
+        "Middle Name: " + nameParts[1] + "<br>" + 
+        "Last Name: " + nameParts[2];
+}
+</script>
+
+</body>
+</html>

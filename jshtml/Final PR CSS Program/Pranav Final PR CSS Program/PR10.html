@@ -1,0 +1,41 @@
+<!-- 10. Write a JavaScript program to validate user accounts for multiple set of user ID and password (using switch case statement). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = prompt("Enter User name");
+      let pass = prompt("Enter password");
+
+      switch (user) {
+        case "user1":
+          if (pass === "pass1") {
+            alert("Welcome, user1!");
+          } else {
+            alert("Invalid password for user1.");
+          }
+          break;
+        case "user2":
+          if (pass === "pass2") {
+            alert("Welcome, user2!");
+          } else {
+            alert("Invalid password for user2.");
+          }
+          break;
+        case "user3":
+          if (pass === "pass3") {
+            alert("Welcome, user3!");
+          } else {
+            alert("Invalid password for user3.");
+          }
+          break;
+        default:
+          alert("Invalid user ID.");
+      }
+    </script>
+  </body>
+</html>

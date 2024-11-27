@@ -1,0 +1,25 @@
+<!-- 39. Write a JavaScript that initializes an array called Colors with the names of Colors and display the array elements. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Colors</title>
+  </head>
+  <body>
+    <h3>Colors Array</h3>
+
+    <div id="colorList"></div>
+
+    <script>
+      var Colors = ["Red", "Green", "Blue", "Yellow", "Pink", "Purple"];
+
+      var colorList = document.getElementById("colorList");
+      colorList.innerHTML = "Colors in the array:<br>";
+
+      for (var i = 0; i < Colors.length; i++) {
+        colorList.innerHTML += Colors[i] + "<br>";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!-- 34. Write a webpage that accepts Username and adharcard as input texts. When the user enters adhaarcard number ,the JavaScript validates card number and diplays whether card number is valid or not. (Assume valid adhaar card format to be nnnn.nnnn.nnnn or nnnn-nnnn-nnnn). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    Enter Username:<input type="text" /><br /><br />
+    Enter Aadhar no:<input type="text" id="t1" /><br /><br />
+    <input type="button" onclick="display()" value="Validate" /><br /><br />
+    <p id="p1"></p>
+
+    <script>
+      function display() {
+        var aadhar = document.getElementById("t1").value;
+        var p = /^\d{4}[.-]\d{4}[.-]\d{4}$/;
+        if (p.test(aadhar))
+          document.getElementById("p1").innerHTML = "Valid Aadhar";
+        else document.getElementById("p1").innerHTML = "Invalid Aadhar";
+      }
+    </script>
+  </body>
+</html>

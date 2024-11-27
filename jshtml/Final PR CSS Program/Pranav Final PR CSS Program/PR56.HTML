@@ -1,0 +1,35 @@
+<!-- 56. Write a Java script to design a form to accept values for user ID & password -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+  </head>
+  <body>
+    <h2>Login Form</h2>
+
+    <form id="loginForm">
+      <label for="userID">User ID:</label>
+      <input type="text" id="userID" /><br /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" /><br /><br />
+
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+      function submitForm() {
+        var userID = document.getElementById("userID").value;
+        var password = document.getElementById("password").value;
+
+        if (!userID || !password) {
+          alert("Please fill in both fields.");
+        } else {
+          alert("User ID: " + userID + "\nPassword: " + password);
+        }
+      }
+    </script>
+  </body>
+</html>

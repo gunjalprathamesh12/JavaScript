@@ -1,0 +1,46 @@
+<!-- 70. Write the JavaScript code for below operations:
+i. Name, Email & Pin Code should not be blank.
+ii. Pin Code must contain 6 digits & it should not be accept any characters. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form Validation</title>
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const pinCode = document.getElementById("pinCode").value;
+
+        if (!name || !email || !pinCode) {
+          alert("Name, Email, and Pin Code should not be blank.");
+          return false;
+        }
+
+        const pinCodePattern = /^\d{6}$/;
+        if (!pinCodePattern.test(pinCode)) {
+          alert("Pin Code must contain exactly 6 digits.");
+          return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" /><br /><br />
+
+      <label for="pinCode">Pin Code:</label>
+      <input type="text" id="pinCode" maxlength="6" /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

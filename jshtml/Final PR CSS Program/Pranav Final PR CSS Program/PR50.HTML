@@ -1,0 +1,25 @@
+<!-- 50. Write a function that prompts the user for a color and uses what they select to set the background color of the new webpage opened -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Background Color</title>
+  </head>
+  <body>
+    <h3>Set Background Color of New Window</h3>
+    <button onclick="setBackgroundColor()">
+      Open New Window and Set Color
+    </button>
+
+    <script>
+      function setBackgroundColor() {
+        var color = prompt("Enter a color for the background:");
+
+        var newWindow = window.open("", "", "width=500,height=500");
+
+        newWindow.document.body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>
