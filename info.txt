@@ -1,12 +1,7 @@
 datatypes in js are following
-
 number 
-
 string
-
 bollean
-
 null
-
 undefined
 
