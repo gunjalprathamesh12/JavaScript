@@ -4,5 +4,3 @@ string
 bollean
 null
 undefined
-
-
