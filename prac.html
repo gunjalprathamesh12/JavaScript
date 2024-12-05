@@ -7,22 +7,18 @@
   </head>
   <body>
     <script>
-      function check(){
-      var no = parseInt(window.prompt("Enter no="));
-      var flag = true;
-      for (var i = 2; i < no; i++) {
-        if (no % i == 0) {
-          flag = false;
-          break;
-        }
-      }
-      if (flag) {
-        document.write("no is prime");
-      } else {
-        document.write("No is not prime");
-      }
-    }
-    check();
+      var stud = {
+        name: "Rah",
+        age: 90,
+        Lang: "",
+        setLang(value) {
+          this.Lang = value;
+        },
+      };
+      stud.Lang = "English";
+      document.write(stud.Lang);
+      delete stud.age;
+      document.write(stud.age);
     </script>
   </body>
 </html>
