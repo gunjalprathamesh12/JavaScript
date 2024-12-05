@@ -6,19 +6,13 @@
     <title>Document</title>
   </head>
   <body>
+    <p>even no's from 1to20</p>
     <script>
-      function getBrowser() {
-        const userAgent = navigator.userAgent;
-
-        if (userAgent.includes("Chrome")) return "Chrome";
-        if (userAgent.includes("Firefox")) return "Firefox";
-        if (userAgent.includes("Safari")) return "Safari";
-        if (userAgent.includes("Edge")) return "Edge";
-        if (userAgent.includes("Opera")) return "Opera";
-        return "Unknown Browser";
+      for (var i = 1; i <= 20; i++) {
+        if (i % 2 == 0) {
+          document.write(i + "<br>");
+        }
       }
-      document.write("The browser is:", getBrowser());
     </script>
   </body>
 </html>
-
