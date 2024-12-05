@@ -1,0 +1,39 @@
+<!-- 73. Write a JavaScript program which compute, the average marks of the following students Then, this average is used to determine the corresponding grade. The grades are computed as follows: -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let students = {
+        Advait: 80,
+        Anay: 77,
+        Manyata: 88,
+        Saanvi: 95,
+        Saachi: 68,
+      };
+
+      let totalMarks = 0;
+      let numberOfStudents = 0;
+
+      for (let student in students) {
+        totalMarks += students[student];
+        numberOfStudents++;
+      }
+      let average = totalMarks / numberOfStudents;
+
+      let grade;
+      if (average < 60) grade = "F";
+      else if (average < 70) grade = "D";
+      else if (average < 80) grade = "C";
+      else if (average < 90) grade = "B";
+      else if (average < 100) grade = "A";
+
+      document.write("Average Marks: " + average + "<br>");
+      document.write("Grade: " + grade);
+    </script>
+  </body>
+</html>
