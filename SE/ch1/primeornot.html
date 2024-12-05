@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>check the entered no is prime or not</p>
+    <script>
+      function pornot() {
+        var a = parseInt(window.prompt("enter no="));
+        var flag = true;
+        for (var i = 2; i < a; i++) {
+          if (a % i == 0) {
+            flag = false;
+            break;
+          }
+        }
+        if (flag) {
+          document.write("entered no= " + a + " is prime");
+        } else {
+          document.write("No is not prime");
+        }
+      }
+      pornot();
+    </script>
+  </body>
+</html>
