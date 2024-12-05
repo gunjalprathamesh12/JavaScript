@@ -6,17 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <p>addition os no</p>
     <script>
-      function som() {
-        var no = window.prompt("Enter no=");
-        var sum = 0;
-        for (var i = 0; i < no.length; i++) {
-          sum = sum + parseInt(no[i]);
-        }
-        document.write("Sum of no entered is=" + sum);
-      }
-      som();
+      var age = parseInt(window.prompt("Enter your age="));
+      var a = age > 18 ? "Adult" : "not eligible";
+      document.write(a);
     </script>
   </body>
 </html>
