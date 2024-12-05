@@ -6,10 +6,26 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="i"></p>
+    <br />
+    <p>
+      enter your name
+      <input type="text" id="name" placeholder="name" />
+    </p>
+    <br />
+    <p>
+      enter your domain
+      <input type="text" id="domain" placeholder="domain" />
+    </p>
+    <br />
+    <button onclick="displaymail()">displaymail</button>
     <script>
-      var age = parseInt(window.prompt("Enter your age="));
-      var a = age > 18 ? "Adult" : "not eligible";
-      document.write(a);
+      function displaymail() {
+        var name = document.getElementById("name").value;
+        var domain = document.getElementById("domain").value;
+        var eamil = name + "@" + domain + ".com";
+        document.getElementById("i").innerHTML = eamil;
+      }
     </script>
   </body>
 </html>
