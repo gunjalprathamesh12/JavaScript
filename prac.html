@@ -6,17 +6,25 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="radio" name="category" onclick="showitems('fruits')" />fruits
+    <input type="radio" name="category" onclick="showItems('vegetables')" />
+    Vegetables
+
+    <select id="items">
+      <option>--Select Option--</option>
+    </select>
     <script>
-      function argu(name, age, year) {
-        document.write(name);
-        document.write(age);
-        document.write(year);
+      function showitems(type) {
+        var items =
+          type === "fruits"
+            ? ["Apple", "Mango", "Banana"]
+            : ["Bringle", "Bhindi", "Tindi"];
+        var dropdown = document.getElementById("items");
+        dropdown.innerHTML = "<option>--Select Items--</option>";
+        for (var i = 0; i < items.length; i++) {
+          dropdown.innerHTML += "<option>" + items[i] + "</option>";
+        }
       }
-      var n = "Prathamesh";
-      var a = 90;
-      var y = 2025;
-      var res = argu(n, a, y);
-      document.write(res);
     </script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Select a Beverage:</h3>
+
+    <input type="radio" name="beverage" onclick="showOptions('tea')"> Tea<br>
+    <input type="radio" name="beverage" onclick="showOptions('coffee')"> Coffee<br>
+    <input type="radio" name="beverage" onclick="showOptions('softdrink')"> Soft Drink<br>
+
+    <br>
+    <select id="options">
+      <option>--Select an option--</option>
+    </select>
+
+    <script>
+      function showOptions(beverage) {
+        var options = 
+          beverage === "tea"
+            ? ["Green Tea", "Milk Tea", "Black Tea"]
+            : beverage === "coffee"
+            ? ["Cappuccino", "Latte", "Espresso"]
+            : ["Maaza", "Sprite", "Coca-Cola"];
+
+        var dropdown = document.getElementById("options");
+        dropdown.innerHTML = "<option>--Select an option--</option>";
+        
+        for (var i = 0; i < options.length; i++) {
+          dropdown.innerHTML += "<option>" + options[i] + "</option>";
+        }
+      }
+    </script>
+  </body>
+</html>
