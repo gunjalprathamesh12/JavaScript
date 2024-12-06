@@ -6,19 +6,30 @@
     <title>Document</title>
   </head>
   <body>
+    <p>enter uid <input type="text" id="uid" placeholder="u name" /></p>
+    <br />
+    <p>
+      enter password
+      <input type="password" id="pass" placeholder="password" />
+    </p>
+    <br />
+    <p id="res"></p>
+    <button onclick="submit()">Submit</button>
     <script>
-      var stud = {
-        name: "Rah",
-        age: 90,
-        Lang: "",
-        setLang(value) {
-          this.Lang = value;
-        },
-      };
-      stud.Lang = "English";
-      document.write(stud.Lang);
-      delete stud.age;
-      document.write(stud.age);
+      function submit() {
+        var u = document.getElementById("uid").value;
+        var p = document.getElementById("pass").value;
+        switch (u) {
+          case "user1":
+            if (p == "pass1") {
+              document.getElementById("res").innerHTML = "Valid user";
+            } else {
+              document.getElementById("res").innerHTML = "Invalid user";
+            }
+          default:
+            window.alert("Enter a valid u nam ena dpas");
+        }
+      }
     </script>
   </body>
 </html>
