@@ -6,24 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="radio" name="category" onclick="showitems('fruits')" />fruits
-    <input type="radio" name="category" onclick="showItems('vegetables')" />
-    Vegetables
+    <p>
+      enter Name
+      <input type="text" id="uname" placeholder="name`" />
+    </p>
+    <br />
+    <button onclick="submit">submit</button>
 
-    <select id="items">
-      <option>--Select Option--</option>
-    </select>
     <script>
-      function showitems(type) {
-        var items =
-          type === "fruits"
-            ? ["Apple", "Mango", "Banana"]
-            : ["Bringle", "Bhindi", "Tindi"];
-        var dropdown = document.getElementById("items");
-        dropdown.innerHTML = "<option>--Select Items--</option>";
-        for (var i = 0; i < items.length; i++) {
-          dropdown.innerHTML += "<option>" + items[i] + "</option>";
-        }
+      function submit() {
+        var n = document.getElementById("uname").value;
+        document.getElementById("uname").disabled = true;
+        document.getElementById("uname").style.backgroundColor = "red";
       }
     </script>
   </body>
