@@ -1,3 +1,5 @@
+<!-- Write a JavaScript function for storing the cookie. It gets executed when the password 
+changes. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,14 +8,29 @@
     <title>Document</title>
   </head>
   <body>
+    <p>
+      enter your name
+      <input type="text" id="n" placeholder="name" />
+    </p>
+    <p>
+      enter password
+      <input type="password" id="p" placeholder="password" onchange="upda()" />
+    </p>
+    <br />
+    <button onclick="changepass()">ChangPassword</button>
     <script>
-      function getBrowser() {
-        var userAgent = navigator.userAgent.toLocaleLowerCase();
-        if (userAgent.includes("edg")) return "edge";
-        else if (userAgent.includes("chrome")) return "chrome";
-        return "unknown brower";
+      var name = document.getElementById("n").value;
+      var password = document.getElementById("p").value;
+      function changepass() {
+        var pass1 = window.prompt("Enter new password");
       }
-      document.write("Browser is=", getBrowser());
+      if (password != pass1) {
+        document.write("cookie updated" + upda());
+      }
+      function upda() {
+        document.cookie = document.getElementById("n").value + pass1;
+        window.alert("Cookie Updates");
+      }
     </script>
   </body>
 </html>
