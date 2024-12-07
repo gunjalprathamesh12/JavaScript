@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="clk"></p>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+      let timer;
+      function start() {
+        timer = setInterval(() => {
+          const now = new Date();
+          document.getElementById("clk").innerHTML = now.toLocaleTimeString();
+        }, 1000);
+
+        function stop() {
+          clearInterval(timer);
+          document.getElementById("clk").innerHTML =
+            "click on stop to see the real time clock";
+        }
+      }
+    </script>
+  </body>
+</html>

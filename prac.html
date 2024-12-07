@@ -7,17 +7,28 @@
   </head>
   <body>
     <p>
-      enter Name
-      <input type="text" id="uname" placeholder="name`" />
+      enter uname
+      <input type="text" id="uname" placeholder="name" />
+    </p>
+    <p>
+      enter password
+      <input type="password" id="pass" placeholder="password" />
     </p>
     <br />
-    <button onclick="submit">submit</button>
 
+    <button onclick="createcookie()">CreateCookie</button>
+    <button onclick="displaycookir()">displaycookie</button>
     <script>
-      function submit() {
-        var n = document.getElementById("uname").value;
-        document.getElementById("uname").disabled = true;
-        document.getElementById("uname").style.backgroundColor = "red";
+      function createcookie() {
+        document.cookie =
+          "Unmae=" +
+          document.getElementById("uname").value +
+          "Password=" +
+          document.getElementById("pass").value;
+        window.alert("Cookie Create");
+      }
+      function displaycookir() {
+        window.alert(document.cookie);
       }
     </script>
   </body>
