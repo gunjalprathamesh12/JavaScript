@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" name="beverage" onclick="showitems('fruit')" />fruit
+    <input type="radio" name="beverage" onclick="showitems('coffee')" />vegetable
+    <select id="options">
+      <option>--Select OPtion--</option>
+    </select>
+    <script>
+      function showitems(beverage) {
+        var options =
+          beverage === "fruit"
+            ? ["Apple", "Mango", "Banana"]
+            : ["Maza", "Fanta", "Jeera Soda", "paper boat"];
+        var dropdown = document.getElementById("options");
+        dropdown.innerHTML = "<option>--Select Option--</option>";
+        for (var i = 0; i < options.length; i++) {
+          dropdown.innerHTML += "<option>" + options[i] + "</option>";
+        }
+      }
+    </script>
+  </body>
+</html>

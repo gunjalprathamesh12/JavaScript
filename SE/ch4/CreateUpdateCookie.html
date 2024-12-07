@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create and Update Cookie</title>
+  </head>
+  <body>
+    <!-- expiry must be given in the double quotes 
+      ("expires=Mon, 20 Dec 2024 12:00:00 UTC");-->
+    <h4>simple cookies Program for getting and setting cookies</h4>
+    Enter the Key:<input type="text" id="key1" placeholder="Enter key Value" />
+    <br /><br />
+    Enter the Value:<input type="text" id="value1" placeholder="Enter  Value" />
+    <br /><br />
+    <input
+      type="button"
+      name="createCookie"
+      value="createCookie"
+      onclick="createCookie()"
+    />
+    <br />
+    <br>
+    <input
+      type="button"
+      name="updateCookie"
+      value="updateCookie"
+      onclick="updateCookie()"
+    />
+    <br /><br />
+    <script>
+      function CreateCookie() {
+        document.cookie =
+          document.getElementById("t1").value +
+          " = " +
+          document.getElementById("t2").value;
+        ("expires=Mon, 20 Dec 2024 12:00:00 UTC");
+        alert("Cookie Created");
+      }
+
+      function updateCookie() {
+        var q = prompt("Enter The Key to update::");
+        var r = prompt("Enter the value::");
+        document.cookie = q + "=" + r + ";";
+        alert("Cookie update sucessfully");
+        alert(document.cookie);
+      }
+    </script>
+  </body>
+</html>
+
