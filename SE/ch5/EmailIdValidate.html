@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="return validate()">
+      <p>
+        enter email
+        <input type="email" id="eid" placeholder="enter email" />
+      </p>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      function validate() {
+        var eid = document.getElementById("eid").value;
+        var epattern = /^\S+@\S+\.\S+$/;
+        if (!epattern.test(eid)) {
+          alert("Enter a valid emial");
+          return false;
+        }
+        alert("From submitted Sucessfully");
+        return true;
+      }
+    </script>
+  </body>
+</html>
