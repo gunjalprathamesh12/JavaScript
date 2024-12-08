@@ -1,0 +1,32 @@
+<!-- Write a JavaScript function for storing the cookie. It gets executed when the password 
+changes. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      enter your name
+      <input type="text" id="n" placeholder="name" />
+    </p>
+    <p>
+      enter password
+      <input type="password" id="p" placeholder="password" onchange="upda()" />
+    </p>
+    <br />
+    <button onclick="changepass()">ChangPassword</button>
+    <script>
+      var name = document.getElementById("n").value;
+      var password = document.getElementById("p").value;
+      function changepass() {
+        var pass1 = window.prompt("Enter new password");
+        document.cookie =
+          document.getElementById("n").value + "Password" + pass1;
+        window.alert("Cookie Updates");
+      }
+    </script>
+  </body>
+</html>
