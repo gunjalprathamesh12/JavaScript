@@ -3,25 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Rollover Effect</title>
+    <title>Document</title>
   </head>
   <body>
-    <img
-      id="myImage"
-      src="imp1.jpeg"
-      alt="Image"
-      width="300"
-      onmouseover="change()"
-      onmouseout="original()"
-    />
-
     <script>
-      function change() {
-        document.getElementById("myImage").src = "imp2.jpeg"; // Hover image
-      }
-      function original() {
-        document.getElementById("myImage").src = "imp1.jpeg"; // Original image
-      }
+      document.write("browser is=" + navigator.appName);  
     </script>
   </body>
 </html>
