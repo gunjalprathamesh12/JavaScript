@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="res"></p>
+    <script>
+      var str = "Welcome to India";
+      var pattern = /Welcome/;
+      var ans = str.search(pattern);
+      document.getElementById("res").innerHTML =
+        ans !== -1 ? "Welcome is found" : "Welcome is not found";
+    </script>
+  </body>
+</html>

@@ -6,26 +6,20 @@
     <title>Document</title>
   </head>
   <body>
-    <label for="option">select image</label>
-    <select id="option" onchange="display()">
-      <option value="">select image</option>
-      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image1</option>
-      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image2</option>
-      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image3</option>
-      <option value="D:\JavaScriptDemo\JavaScript\projimg.webp">image4</option>
-    </select>
+    <h1>Display Message on Page Onload means open new window</h1>
     <script>
-      function display() {
-        var selectedimg = document.getElementById("option").value;
-        if (selectedimg) {
-          var newwindow = window.open("", "", "width=500 height=500");
-          newwindow.document.write(
-            '<img src="' +
-              selectedImage +
-              '" alt="Selected Image" style="max-width:100%; max-height:100%;"/>'
-          );
-        }
+      function popup() {
+        window
+          .open("", "Welcome Popup", "width=500 height=500")
+          .document.write("Welcome to Scriting");
       }
+      function showFunPopup() {
+        window
+          .open("", "FunPopUp", "width=500 height=500")
+          .document.write("Fun with scripting");
+      }
+      window.onload=popup();
+      window.onbeforeunload=showFunPopup();
     </script>
   </body>
 </html>

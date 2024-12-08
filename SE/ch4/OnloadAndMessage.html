@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Object Example</title>
+  <script>
+    // Function to open the first popup on page load
+    function showWelcomePopup() {
+      window.open("", "WelcomePopup", "width=300,height=200").document.write(
+        "<p style='font-size: 20px; text-align: center;'>WELCOME TO SCRIPTING</p>"
+      );
+    }
+
+    // Function to open the second popup on page unload
+    function showFunPopup() {
+      window.open("", "FunPopup", "width=300,height=200").document.write(
+        "<p style='font-size: 20px; text-align: center;'>FUN WITH SCRIPTING</p>"
+      );
+    }
+
+    // Attach event handlers
+    window.onload = showWelcomePopup;
+    window.onbeforeunload = showFunPopup;
+  </script>
+</head>
+<body>
+  <h1>Explore Window Object Properties</h1>
+  <p>Check out the popups on load and unload!</p>
+</body>
+</html>
