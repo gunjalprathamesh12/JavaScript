@@ -3,29 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Window Object Example</title>
+  <title>Window Example</title>
   <script>
-    // Function to open the first popup on page load
-    function showWelcomePopup() {
-      window.open("", "WelcomePopup", "width=300,height=200").document.write(
-        "<p style='font-size: 20px; text-align: center;'>WELCOME TO SCRIPTING</p>"
-      );
+    function showWelcome() {
+      const popup = window.open("", "Welcome", "width=300,height=200");
+      popup.document.write("WELCOME TO SCRIPTING");
     }
 
-    // Function to open the second popup on page unload
-    function showFunPopup() {
-      window.open("", "FunPopup", "width=300,height=200").document.write(
-        "<p style='font-size: 20px; text-align: center;'>FUN WITH SCRIPTING</p>"
-      );
+    function showFun() {
+      const popup = window.open("", "Fun", "width=300,height=200");
+      popup.document.write("FUN WITH SCRIPTING");
     }
 
-    // Attach event handlers
-    window.onload = showWelcomePopup;
-    window.onbeforeunload = showFunPopup;
+    window.onload = showWelcome();
+    window.onbeforeunload = showFun();
   </script>
 </head>
 <body>
-  <h1>Explore Window Object Properties</h1>
-  <p>Check out the popups on load and unload!</p>
+  <h1>Explore Window Object</h1>
 </body>
 </html>

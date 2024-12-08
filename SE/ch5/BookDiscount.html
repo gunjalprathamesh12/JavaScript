@@ -1,0 +1,36 @@
+28. Write a javascript program to design HTML page with books information in tabular format, use rollovers to display the discount information
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function display() {
+        alert("Discount");
+      }
+    </script>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Cost</th>
+        <th>Discount</th>
+      </tr>
+      <tr>
+        <td><a onmouseover="display()">Book1</a></td>
+        <td>Author</td>
+        <td>3000</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a onmouseover="display()">Book2</a></td>
+        <td>Author</td>
+        <td>3000</td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
