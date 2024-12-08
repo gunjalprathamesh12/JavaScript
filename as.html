@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Frame Example</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .buttons {
+        text-align: center;
+        padding: 10px;
+        background-color: #f0f0f0;
+      }
+      .frames {
+        display: flex;
+        height: 80vh;
+      }
+      iframe {
+        flex: 1;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Buttons -->
+    <div class="buttons">
+      <button onclick="showContent('frame2', 'Sport Page')">SPORT</button>
+      <button onclick="showContent('frame3', 'Music Page')">MUSIC</button>
+      <button onclick="showContent('frame4', 'Dance Page')">DANCE</button>
+    </div>
+
+    <!-- Frames -->
+    <div class="frames">
+      <iframe id="frame2"></iframe>
+      <iframe id="frame3"></iframe>
+      <iframe id="frame4"></iframe>
+    </div>
+
+    <script>
+      function showContent(frameId, pageName) {
+        const content = `<h1>${pageName}</h1><p>Content for ${pageName}.</p>`;
+        const iframe = document.getElementById(frameId);
+        iframe.contentDocument.body.innerHTML = content;
+      }
+    </script>
+  </body>
+</html>

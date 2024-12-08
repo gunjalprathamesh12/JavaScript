@@ -3,23 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Frame Example</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .buttons {
+        text-align: center;
+        padding: 10px;
+        background-color: #f4f4f4;
+      }
+      .frames {
+        display: flex;
+        height: 80vh;
+      }
+      .frame {
+        flex: 1;
+        border: 1px solid #ccc;
+      }
+    </style>
   </head>
   <body>
-    <h1>Display Message on Page Onload means open new window</h1>
+    <!-- Buttons for navigation -->
+    <div class="buttons">
+      <button onclick="loadContent('frame2', 'sport')">SPORT</button>
+      <button onclick="loadContent('frame3', 'music')">MUSIC</button>
+      <button onclick="loadContent('frame4', 'dance')">DANCE</button>
+    </div>
+
+    <!-- Frames displayed side by side -->
+    <div class="frames">
+      <iframe id="frame2" class="frame"></iframe>
+      <iframe id="frame3" class="frame"></iframe>
+      <iframe id="frame4" class="frame"></iframe>
+    </div>
+
     <script>
-      function popup() {
-        window
-          .open("", "Welcome Popup", "width=500 height=500")
-          .document.write("Welcome to Scriting");
+      // Function to load content into the specified iframe
+      function loadContent(frameId, type) {
+        let content = '';
+        if (type === 'sport') {
+          content = `<h1>Welcome to the Sports Page</h1><p>Sports content goes here...</p>`;
+        } else if (type === 'music') {
+          content = `<h1>Welcome to the Music Page</h1><p>Music content goes here...</p>`;
+        } else if (type === 'dance') {
+          content = `<h1>Welcome to the Dance Page</h1><p>Dance content goes here...</p>`;
+        }
+
+        // Dynamically update the iframe's content
+        const iframe = document.getElementById(frameId);
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(content);
+        doc.close();
       }
-      function showFunPopup() {
-        window
-          .open("", "FunPopUp", "width=500 height=500")
-          .document.write("Fun with scripting");
-      }
-      window.onload=popup();
-      window.onbeforeunload=showFunPopup();
     </script>
   </body>
 </html>

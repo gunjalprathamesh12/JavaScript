@@ -1,0 +1,26 @@
+<!--. Write a JavaScript that accepts a string and searches for the pattern "MSBTE" in the given 
+string using regular expressions. If the pattern is found, JavaScript will display that 
+"Pattern is found" else display "Pattern is not found". -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function find() {
+        var str = window.prompt("Enter String=");
+        var patern = window.prompt("enter pattern to find");
+        var pat = /patern/;
+        if (str.search(pat)) {
+          window.alert(patern + "Found in String (" + str + ")");
+        } else {
+          window.alert(patern + "not found in string");
+        }
+      }
+      find();
+    </script>
+  </body>
+</html>
