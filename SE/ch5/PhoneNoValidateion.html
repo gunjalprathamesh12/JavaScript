@@ -1,0 +1,17 @@
+<!--.   Construct regular expression for validating the phone number in following format only : 
+(nnn)-nnnn-nnnn OR nnn.nnnn.nnnn   -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var pno = "999-999-9999";
+      var ppattern = /^(\d{3})[-.](\d{3})[-.](\d{4})$/;
+      document.write(ppattern.test(pno));
+    </script>
+  </body>
+</html>
