@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="validate()">
+      <p>
+        Enter UserId
+        <input type="text" id="uid" placeholder="ex:- P123456789" />
+      </p>
+      <p>
+        enter AAdharNo
+        <input type="number" id="ano" placeholder="nnnn nnnn nnnn" />
+      </p>
+
+      <button type="submit">Submit</button>
+      <script>
+        function validate() {
+          var uid = document.getElementById("uid").value;
+          var ano = document.getElementById("ano").value;
+
+          var upattern = /^[A-Z][A-Za-z0-9]{9}$/;
+          var apattern = /^\d{4}\d{4}\d{4}$/;
+          if (!upattern.test(uid)) {
+            alert("ENTER VALID PATTERN ");
+            return false;
+          }
+          if (!apattern.test(ano)) {
+            alert("Enter valid no ");
+            return false;
+          }
+          alert("from submitted");
+          return true;
+        }
+      </script>
+    </form>
+  </body>
+</html>
