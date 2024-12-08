@@ -10,12 +10,19 @@
 
     <script>
       const today = new Date();
-      const date = today.getDate().toString().padStart(2, '0');
-      const month = (today.getMonth() + 1).toString().padStart(2, '0');
+      const date = today.getDate().toString().padStart(2, "0");
+      const month = (today.getMonth() + 1).toString().padStart(2, "0");
       const year = today.getFullYear();
 
       // Display the formatted date
       document.getElementById("date").textContent = `${date}/${month}/${year}`;
+    </script>
+    <script>
+      var ttoday = new Date();
+      var dday = today.getDate();
+      var mmonth = today.getMonth();
+      var yyear = today.getFullYear();
+      document.write(`${dday}/${mmonth}/${yyear}`);
     </script>
   </body>
 </html>

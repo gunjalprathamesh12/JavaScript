@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      enter name
+      <input type="text" id="n" placeholder="name" />
+    </p>
+    <p>
+      enter mail
+      <input type="emial" id="e" placeholder="mail" />
+    </p>
+    <button onclick="submit()">submit</button>
+    <script>
+      function submit() {
+        var name = document.getElementById("n").value;
+        var email = document.getElementById("e").value;
+        var npattern = /^[A-za-z\s]$/;
+        var epatern = /^[a-z0-9A-Z]\@[a-zA-Z]\.[A-Za-z]$/;
+        if (!npattern.test(name)) {
+          alert("Pls enter Valid name id");
+          return fal;
+        }
+        if (!epatern.test(email)) {
+          alert("pls enter valid mail");
+          return false;
+        }
+        alert("submitted sucessfully");
+        return true;
+      }
+    </script>
+  </body>
+</html>
