@@ -3,23 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Simple Frame Example</title>
   </head>
   <body>
-    <div class="button">
-      <button onclick="showinfo('frame2','sports')">frame2</button>
-      <button onclick="showinfo('frame3','dance')">frame2</button>
-      <button onclick="showinfo('frame4','music')">frame2</button>
+    <!-- Buttons -->
+    <div class="buttons">
+      <button onclick="showContent('frame2', 'Sport Page')">SPORT</button>
+      <button onclick="showContent('frame3', 'Music Page')">MUSIC</button>
+      <button onclick="showContent('frame4', 'Dance Page')">DANCE</button>
     </div>
-    <div class="frame">
+
+    <!-- Frames -->
+
+    <div class="frames">
       <iframe id="frame2"></iframe>
       <iframe id="frame3"></iframe>
       <iframe id="frame4"></iframe>
     </div>
+
     <script>
-      function showinfo(frameId, pageName) {
+      function showContent(frameId, pageName) {
         const content = `<h1>${pageName}</h1><p>Content for ${pageName}.</p>`;
-        const iframe = document.getElementById("frameId");
+        const iframe = document.getElementById(frameId);
         iframe.contentDocument.body.innerHTML = content;
       }
     </script>
