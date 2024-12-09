@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="option">select color</label>
+    <select id="option" onchange="chnage()">
+        <option value="">select</option>
+      <option value="red">red</option>
+      <option value="pink">pink</option>
+    </select>
+    <script>
+      function chnage() {
+        var selectedcolor = document.getElementById("option").value;
+        if (selectedcolor) {
+          document.body.style.backgroundColor = selectedcolor;
+        }
+      }
+    </script>
+  </body>
+</html>

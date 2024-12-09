@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var text = "Welcome to MSBTE ";
+      var pos = 0;
+      function scrolltext() {
+        document.title = text.substring(pos) + text.substring(0, pos);
+        pos = (pos + 1) % text.length;
+      }
+      setInterval(scrolltext, 150);
+    </script>
+  </body>
+</html>

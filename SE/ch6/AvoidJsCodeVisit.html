@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>right clik to see magic</p>
+    <br />
+    <p>press ctrl+u or f12</p>
+    <script>
+      document.oncontextmenu = function () {
+        alert("you cant right clikc");
+        return false;
+      };
+
+      document.onkeydown = function (event) {
+        if (event.keyCode == 123 || (event.ctrlKey && event.keyCode == 85)) {
+          alert("you cannot view js code");
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>
