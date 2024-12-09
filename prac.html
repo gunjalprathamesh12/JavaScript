@@ -6,30 +6,22 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="buttons">
+      <button onclick="show('frame2','sport page')">Sport</button>
+      <button onclick="show('frame3','dance page')">Dance</button>
+      <button onclick="show('frame4','music page')">Music</button>
+    </div>
+    <div>
+      <iframe id="frame2"></iframe>
+      <iframe id="frame3"></iframe>
+      <iframe id="frame4"></iframe>
+    </div>
     <script>
-      function calcy() {
-        var a = 10;
-        var b = 20;
-        var c = ;
-        switch (c) {
-          case 1:
-            document.write(a + b);
-            break;
-          case 2:
-            document.write(a - b);
-            break;
-          case 3:
-            document.write(a * b);
-            break;
-          case 4:
-            document.write(a / b);
-            break;
-          default:
-            document.write("Enter valid choice");
-            break;
-        }
+      function show(fis, pname) {
+        const content = `<h1>${pnmae}</h1><p>Content for ${pname}.</p>`;
+        const iframe = document.getElementById(fis);
+        iframe.contentDocument.body.innerHTML = content;
       }
-      calcy();
     </script>
   </body>
 </html>
