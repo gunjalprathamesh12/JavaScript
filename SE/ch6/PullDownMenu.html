@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Pull Down Menu</p>
+    <label for="option">select website</label>
+    <select id="option" onchange="redirect()">
+        <option value="">select site</option>
+      <option value="google">GOOGLE</option>
+      <option value="msbte">MSBTE</option>
+      <option value="yahoo">YAHOO</option>
+    </select>
+    <script>
+      function redirect() {
+        var selectedval = document.getElementById("option").value;
+        if (selectedval == "google") {
+          window.open("http://www.google.com");
+        } else if (selectedval == "msbte") {
+          window.open("http://www.msbte.com");
+        } else if (selectedval == "yahoo") {
+          window.open("http://yahoo.com");
+        }
+      }
+    </script>
+  </body>
+</html>
