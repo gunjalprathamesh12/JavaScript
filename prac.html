@@ -6,24 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="http://www.example.com" target="_blank" id="banner_link">
-      <img src="imp1.jpeg" alt="img" id="img" />
-    </a>
     <script>
-      const ads = [
-        { Image: "imp1.jpeg", url: "http://www.google.com" },
-        {
-          Image: "imp2.jpeg",
-          url: "http://youtube.com",
-        },
-      ];
-      let i = 0;
-      function scroll() {
-        i = (i + 1) % ads.length;
-        document.getElementById("img").src = ads[i].Image;
-        document.getElementById("banner_link").src = ads[i].url;
-      }
-      setInterval(scroll, 1000);
+      var a = "a";
+      document.write(a.charCodeAt(0));
+      
     </script>
   </body>
 </html>

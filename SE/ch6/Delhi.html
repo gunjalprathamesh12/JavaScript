@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Pull Down Menu</p>
+    <select id="cities" onchange="showCity()">
+      <option value="">--Select--</option>
+      <option value="NewDelhi">New Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Bangalore">Bangalore</option>
+    </select>
+
+    <table id="cityTable" border="1" style="display: none; margin-top: 20px">
+      <tr>
+        <td id="cityName"></td>
+        <td id="cityDesc"></td>
+        <td><img id="cityImg" width="100" /></td>
+      </tr>
+    </table>
+
+    <script>
+      function showCity() {
+        var city = document.getElementById("cities").value;
+        if (city) {
+          var data = {
+            NewDelhi: [
+              "New Delhi",
+              "Capital of India",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJtWjFjV1J06xqgYlVjmdsdhUGpAAreuoVtA&s",
+            ],
+            Mumbai: [
+              "Mumbai",
+              "Financial hub of India",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF5VOtMIdKbVYoLxawds-ZGKsUq1ep3JalOA&s",
+            ],
+            Bangalore: [
+              "Bangalore",
+              "IT hub of India",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDzJJIFNTRmEZqi4eSLMAw_JGmqxk74fggSg&s",
+            ],
+          };
+          document.getElementById("cityName").innerText = data[city][0];
+          document.getElementById("cityDesc").innerText = data[city][1];
+          document.getElementById("cityImg").src = data[city][2];
+          document.getElementById("cityTable").style.display = "table";
+        } else {
+          document.getElementById("cityTable").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

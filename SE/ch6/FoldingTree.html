@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Folding Tree Menu</title>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      .sub-menu {
+        display: none;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Folding Tree Menu</h3>
+    <ul>
+      <li onclick="toggleMenu(this)">
+        Item 1
+        <ul class="sub-menu">
+          <li>Sub-item 1.1</li>
+          <li>Sub-item 1.2</li>
+        </ul>
+      </li>
+      <li onclick="toggleMenu(this)">
+        Item 2
+        <ul class="sub-menu">
+          <li>Sub-item 2.1</li>
+          <li>Sub-item 2.2</li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      function toggleMenu(element) {
+        const subMenu = element.querySelector(".sub-menu");
+        if (subMenu) {
+          subMenu.style.display =
+            subMenu.style.display === "block" ? "none" : "block";
+        }
+      }
+    </script>
+  </body>
+</html>
