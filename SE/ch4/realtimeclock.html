@@ -8,11 +8,12 @@
   <body>
     <p id="clk"></p>
     <button onclick="start()">Start</button>
-    
+
     <button onclick="stop()">Stop</button>
     <script>
       let timer;
       function start() {
+        
         timer = setInterval(() => {
           const now = new Date();
           document.getElementById("clk").innerHTML = now.toLocaleTimeString();
