@@ -8,6 +8,7 @@
   <body>
     <p id="clk"></p>
     <button onclick="start()">Start</button>
+    
     <button onclick="stop()">Stop</button>
     <script>
       let timer;
@@ -15,14 +16,14 @@
         timer = setInterval(() => {
           const now = new Date();
           document.getElementById("clk").innerHTML = now.toLocaleTimeString();
-        }, 1000);
+        }, 1000)};
 
         function stop() {
           clearInterval(timer);
           document.getElementById("clk").innerHTML =
             "click on stop to see the real time clock";
         }
-      }
+      
     </script>
   </body>
 </html>

@@ -6,10 +6,19 @@
     <title>Document</title>
   </head>
   <body>
+    <select id="option" onchange="display()">
+      <option value="">select image</option>
+      <option value="imp1.jpeg">image1</option>
+      <option value="imp2.jpeg">image2</option>
+    </select>
     <script>
-      var a = "a";
-      document.write(a.charCodeAt(0));
+      function display() {
+        var selectedimg = document.getElementById("option").value;
+        if (selectedimg) {
+          newwindow = window.open("", "", "width=200 heigh=300");
+          newwindow.document.write('<img src="'+selectedimg+"" "alt=")
+        }
+      }
     </script>
   </body>
-
 </html>
