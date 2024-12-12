@@ -6,19 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    <select id="option" onchange="display()">
-      <option value="">select image</option>
-      <option value="imp1.jpeg">image1</option>
-      <option value="imp2.jpeg">image2</option>
-    </select>
     <script>
-      function display() {
-        var selectedimg = document.getElementById("option").value;
-        if (selectedimg) {
-          newwindow = window.open("", "", "width=200 heigh=300");
-          newwindow.document.write('<img src="'+selectedimg+"" "alt=")
-        }
+      function merg() {
+        var a = [1, 1, 1, 2, 2, 1, 2, 3, 5, 4, 6, 7, 8, 3];
+        var b = [11, 1, 1, 2, 1, 2, 1, 44, 33, 22, 2, 322];
+        var combine = a.concat(b);
+        var removeduplicate = [...new Set(combine)];
+        document.write(removeduplicate);
       }
+      merg();
     </script>
   </body>
 </html>
